@@ -15,7 +15,7 @@ if %errorlevel% neq 0 (
 )
 
 echo [1/4] Installing all system dependencies...
-pip install -r requirements_full.txt
+pip install -r requirements.txt
 
 echo.
 echo [2/4] Verifying Ollama installation...
