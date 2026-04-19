@@ -1,4 +1,4 @@
-"""AetherOS Utils — Formatting Utilities."""
+"""AetherOS Utils   Formatting Utilities."""
 from datetime import datetime, timedelta
 from typing import Union
 

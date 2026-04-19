@@ -1,4 +1,4 @@
-"""AetherOS Automation — Task Scheduler.
+"""AetherOS Automation   Task Scheduler.
 
 Cron-like scheduling for recurring tasks and workflows.
 """

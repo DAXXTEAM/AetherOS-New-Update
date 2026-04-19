@@ -1,4 +1,4 @@
-"""AetherOS Plugin System — Dynamic extension loading and management."""
+"""AetherOS Plugin System   Dynamic extension loading and management."""
 from plugins.manager import PluginManager, PluginInfo, PluginState
 from plugins.base import BasePlugin, PluginHook, PluginCapability
 from plugins.registry import PluginRegistry, PluginDependency

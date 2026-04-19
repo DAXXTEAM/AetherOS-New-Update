@@ -1,4 +1,4 @@
-# AetherOS v3.0 — Technical Specification Document
+# AetherOS v3.0   Technical Specification Document
 
 **Document Version**: 1.0  
 **System Version**: 3.0.0  
@@ -23,47 +23,47 @@ The system comprises 150+ files organized into 15+ modules with approximately 30
 
 | Module | Purpose | Key Components | New in v3.0 |
 |--------|---------|----------------|-------------|
-| `core/` | Orchestration engine | Orchestrator, EventBus, Pipeline, Scheduler | — |
-| `agents/` | AI agent definitions | Architect, Executor, Auditor, Researcher, Guardian | — |
-| `nexus/` | Multimodal interaction | Voice, Vision, Gesture, Ambient, Fusion | ✅ |
-| `security/` | Security subsystem | Crypto, Sentinel, Biometric, Blockchain, Honeypot | ✅ |
-| `intel/` | Threat intelligence | OSINT Scanner, IOC Database, Leak Monitor | ✅ |
-| `localization/` | Multi-language support | i18n Manager, EN/HI/ES translations | ✅ |
-| `telemetry/` | System monitoring | Metrics, Alerting, Dashboard | ✅ |
-| `plugins/` | Extension system | Plugin Manager, Registry, Hooks | ✅ |
-| `api/` | External interfaces | REST Server, WebSocket | ✅ |
-| `memory/` | Knowledge storage | ChromaDB, Knowledge Graph, Context | — |
-| `tools/` | Tool implementations | File, Shell, Web, Crypto, Vision tools | — |
-| `gui/` | Visual interface | Control Panel, Neural Map, Theme | — |
-| `net/` | Networking | Mesh, P2P Discovery, Transport | — |
-| `protocols/` | Communication | Consensus (Raft), Wire protocol | — |
+| `core/` | Orchestration engine | Orchestrator, EventBus, Pipeline, Scheduler |   |
+| `agents/` | AI agent definitions | Architect, Executor, Auditor, Researcher, Guardian |   |
+| `nexus/` | Multimodal interaction | Voice, Vision, Gesture, Ambient, Fusion |   |
+| `security/` | Security subsystem | Crypto, Sentinel, Biometric, Blockchain, Honeypot |   |
+| `intel/` | Threat intelligence | OSINT Scanner, IOC Database, Leak Monitor |   |
+| `localization/` | Multi-language support | i18n Manager, EN/HI/ES translations |   |
+| `telemetry/` | System monitoring | Metrics, Alerting, Dashboard |   |
+| `plugins/` | Extension system | Plugin Manager, Registry, Hooks |   |
+| `api/` | External interfaces | REST Server, WebSocket |   |
+| `memory/` | Knowledge storage | ChromaDB, Knowledge Graph, Context |   |
+| `tools/` | Tool implementations | File, Shell, Web, Crypto, Vision tools |   |
+| `gui/` | Visual interface | Control Panel, Neural Map, Theme |   |
+| `net/` | Networking | Mesh, P2P Discovery, Transport |   |
+| `protocols/` | Communication | Consensus (Raft), Wire protocol |   |
 | `config/` | Configuration | Constants, Settings, Logging | Updated |
 
 ### 2.2 Data Flow Architecture
 
 ```
-User Input ──→ Nexus (Voice/Vision/Gesture)
-                    │
-                    ▼
-            Multimodal Fusion ──→ Command Router
-                    │
-                    ▼
-            Core Orchestrator ──→ Agent Team
-                    │               │
-                    ▼               ▼
-            Task Pipeline ←── Agent Results
-                    │
-                    ▼
-            ┌───────────────────────────────┐
-            │  Parallel Subsystems:         │
-            │  • Blockchain Logging         │
-            │  • Honeypot Monitoring        │
-            │  • OSINT Scanning             │
-            │  • Telemetry Collection       │
-            │  • Security Sentinel          │
-            └───────────────────────────────┘
-                    │
-                    ▼
+User Input   Nexus (Voice/Vision/Gesture)
+                     
+                     
+            Multimodal Fusion   Command Router
+                     
+                     
+            Core Orchestrator   Agent Team
+                                     
+                                     
+            Task Pipeline   Agent Results
+                     
+                     
+             
+               Parallel Subsystems:          
+                 Blockchain Logging          
+                 Honeypot Monitoring         
+                 OSINT Scanning              
+                 Telemetry Collection        
+                 Security Sentinel           
+             
+                     
+                     
             Output (CLI/GUI/API/Voice)
 ```
 
@@ -76,12 +76,12 @@ User Input ──→ Nexus (Voice/Vision/Gesture)
 **Component**: `nexus/voice.py`
 
 #### Pipeline Architecture
-1. **Wake Word Detection** — Continuous audio monitoring with configurable wake words ("Hey Aether")
-2. **Speech-to-Text** — Multi-backend recognition (Google, Sphinx, Whisper)
-3. **Command Matching** — Pattern-based intent recognition with entity extraction
-4. **Voice Authentication** — Speaker verification via voice biometric profiles
-5. **Execution** — Command handler dispatch
-6. **Voice Feedback** — TTS response via pyttsx3
+1. **Wake Word Detection**   Continuous audio monitoring with configurable wake words ("Hey Aether")
+2. **Speech-to-Text**   Multi-backend recognition (Google, Sphinx, Whisper)
+3. **Command Matching**   Pattern-based intent recognition with entity extraction
+4. **Voice Authentication**   Speaker verification via voice biometric profiles
+5. **Execution**   Command handler dispatch
+6. **Voice Feedback**   TTS response via pyttsx3
 
 #### Technical Details
 - Sample rate: 16kHz (configurable)
@@ -100,7 +100,7 @@ User Input ──→ Nexus (Voice/Vision/Gesture)
 - **Motion Detection**: Frame differencing with background subtraction
 - **Face Detection**: Skin-tone region detection with bounding box extraction
 - **Face Recognition**: Encoding-based matching against enrolled profiles
-- **Lockdown Manager**: 5-level graduated lockdown (NONE → SOFT → MEDIUM → HARD → CRITICAL)
+- **Lockdown Manager**: 5-level graduated lockdown (NONE   SOFT   MEDIUM   HARD   CRITICAL)
 
 #### Lockdown Escalation
 | Level | Trigger | Actions |
@@ -147,15 +147,15 @@ User Input ──→ Nexus (Voice/Vision/Gesture)
 
 ```
 Block #N
-├── Header
-│   ├── index: uint64
-│   ├── timestamp: ISO-8601
-│   ├── previous_hash: SHA-256 (64 hex chars)
-│   ├── merkle_root: SHA-256 of transaction Merkle tree
-│   ├── nonce: uint64 (proof-of-work)
-│   └── difficulty: uint8 (leading zeros required)
-└── Body
-    └── transactions: List[AuditTransaction]
+  Header
+      index: uint64
+      timestamp: ISO-8601
+      previous_hash: SHA-256 (64 hex chars)
+      merkle_root: SHA-256 of transaction Merkle tree
+      nonce: uint64 (proof-of-work)
+      difficulty: uint8 (leading zeros required)
+  Body
+      transactions: List[AuditTransaction]
 ```
 
 ### 4.2 Transaction Types
@@ -219,7 +219,7 @@ Block #N
 10 indicator types: IP Address, Domain, URL, Email, File Hash, Registry Key, Mutex, User Agent, SSL Cert Hash, Bitcoin Address
 
 ### 6.3 Threat Level Classification
-5 levels: NONE (0) → LOW (1) → MEDIUM (2) → HIGH (3) → CRITICAL (4)
+5 levels: NONE (0)   LOW (1)   MEDIUM (2)   HIGH (3)   CRITICAL (4)
 
 ---
 
@@ -231,8 +231,8 @@ Block #N
 | Code | Language | Native Name | Direction |
 |------|----------|-------------|-----------|
 | en | English | English | LTR |
-| hi | Hindi | हिंदी | LTR |
-| es | Spanish | Español | LTR |
+| hi | Hindi |   | LTR |
+| es | Spanish | Espa ol | LTR |
 
 ### 7.2 Translation Coverage
 - 100+ translation keys per language
@@ -254,9 +254,9 @@ Block #N
 
 ### 8.2 Alert Rules
 Built-in rules with configurable thresholds:
-- CPU load > 4.0 → WARNING
-- Disk usage > 90% → ERROR
-- Memory > 2GB → WARNING
+- CPU load > 4.0   WARNING
+- Disk usage > 90%   ERROR
+- Memory > 2GB   WARNING
 
 ---
 
@@ -266,10 +266,10 @@ Built-in rules with configurable thresholds:
 
 ### 9.1 Plugin Lifecycle
 ```
-UNLOADED → register() → LOADED → activate() → ACTIVE
-                                      ↑              │
-                                      │   deactivate()
-                                      └──── LOADED
+UNLOADED   register()   LOADED   activate()   ACTIVE
+                                                      
+                                          deactivate()
+                                        LOADED
 ```
 
 ### 9.2 Hook Points
@@ -292,11 +292,11 @@ UNLOADED → register() → LOADED → activate() → ACTIVE
 | GET | `/api/v1/metrics` | System metrics |
 
 ### 10.2 WebSocket Channels
-- `system` — System events
-- `security` — Security alerts
-- `blockchain` — Block mining events
-- `honeypot` — Honeypot alerts
-- `osint` — OSINT findings
+- `system`   System events
+- `security`   Security alerts
+- `blockchain`   Block mining events
+- `honeypot`   Honeypot alerts
+- `osint`   OSINT findings
 
 ---
 
@@ -325,4 +325,4 @@ UNLOADED → register() → LOADED → activate() → ACTIVE
 
 ---
 
-*End of Technical Specification — AetherOS v3.0 "The Singularity"*
+*End of Technical Specification   AetherOS v3.0 "The Singularity"*

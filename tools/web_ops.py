@@ -242,7 +242,7 @@ class WebOps(BaseTool):
         if response.get("error"):
             return ToolResult(success=False, error=response["error"])
         links = self.parser.extract_links(response["body"], url)
-        output = "\n".join(f"[{l['text'][:60]}] → {l['url']}" for l in links)
+        output = "\n".join(f"[{l['text'][:60]}]   {l['url']}" for l in links)
         return ToolResult(success=True, output=output, metadata={"count": len(links), "links": links})
 
     async def _api_call(self, args: dict) -> ToolResult:
@@ -286,7 +286,7 @@ class WebOps(BaseTool):
             size = os.path.getsize(output_path)
             return ToolResult(
                 success=True,
-                output=f"Downloaded {url} → {output_path} ({size:,} bytes)",
+                output=f"Downloaded {url}   {output_path} ({size:,} bytes)",
                 artifacts=[output_path],
                 metadata={"path": output_path, "size": size},
             )

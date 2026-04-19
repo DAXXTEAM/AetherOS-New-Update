@@ -1,4 +1,4 @@
-"""AetherOS Diagnostics — Debug Logging & Tracing.
+"""AetherOS Diagnostics   Debug Logging & Tracing.
 
 Advanced debug logging with snapshot capture and trace collection.
 """

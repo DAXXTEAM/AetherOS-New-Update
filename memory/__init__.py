@@ -1,4 +1,4 @@
-"""AetherOS Memory Module — ChromaDB, Context, Knowledge Graph."""
+"""AetherOS Memory Module   ChromaDB, Context, Knowledge Graph."""
 from memory.chroma_store import ChromaMemoryStore
 from memory.context import ContextManager
 from memory.preferences import PreferenceStore

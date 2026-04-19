@@ -1,4 +1,4 @@
-"""AetherOS Notifications Module — Alert delivery and management."""
+"""AetherOS Notifications Module   Alert delivery and management."""
 from notifications.channels import NotificationChannel, EmailChannel, WebhookChannel, ConsoleChannel
 from notifications.manager import NotificationManager, Notification, NotificationPriority
 

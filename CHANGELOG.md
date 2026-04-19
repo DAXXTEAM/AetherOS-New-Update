@@ -1,8 +1,8 @@
 # AetherOS Changelog
 
-## v3.0.0 — "The Singularity" (2026-04-19)
+## v3.0.0   "The Singularity" (2026-04-19)
 
-### 🆕 New Features
+###   New Features
 - **Aether Nexus Module**: Voice command processing with wake word detection, speech recognition, and TTS feedback
 - **Vision Presence Detection**: Webcam-based operator detection with face recognition and automatic lockdown
 - **Gesture Recognition**: Hand gesture control with 18 gesture types
@@ -15,7 +15,7 @@
 - **OSINT Scanner**: Simulated dark web monitoring for credential leaks
 - **Threat Intelligence Feeds**: Aggregated IOC data from simulated sources
 - **IOC Database**: Local indicator of compromise storage and search
-- **Multi-Language Support**: Full localization for English, Hindi (हिंदी), and Spanish (Español)
+- **Multi-Language Support**: Full localization for English, Hindi ( ), and Spanish (Espa ol)
 - **Telemetry Module**: System metrics collection, aggregation, and alerting
 - **Plugin Architecture**: Dynamic plugin loading with hook-based extension points
 - **REST API Server**: Built-in HTTP API for remote management
@@ -33,14 +33,14 @@
 - **Code Validator**: AST-based security validation for submitted code
 - **Utility Library**: Hashing, formatting, timing, rate limiting, and retry utilities
 
-### ⬆️ Improvements
+###   Improvements
 - Updated constants for all new modules
 - Enhanced security module with blockchain and honeypot integration
 - Expanded test suite to 192+ tests across 14 test files
 - Updated README with ASCII art, multi-language guides, and architecture diagrams
 - Added comprehensive Technical Specification document
 
-### 📊 Statistics
+###   Statistics
 - **Total Files**: 150+
 - **Python Source Files**: 138+
 - **Test Files**: 14+
@@ -49,7 +49,7 @@
 - **Languages Supported**: 3 (EN, HI, ES)
 - **Translation Keys**: 100+ per language
 
-## v2.0.0 — "Ultra-Advanced" (2025)
+## v2.0.0   "Ultra-Advanced" (2025)
 - Multi-agent AI system with LangGraph orchestration
 - Post-quantum cryptography (Kyber, Dilithium)
 - Self-evolution engine with AST patching
@@ -60,7 +60,7 @@
 - Knowledge graph memory
 - GUI control panel
 
-## v1.0.0 — Initial Release
+## v1.0.0   Initial Release
 - Basic agent system
 - Core orchestration
 - Shell and file tools

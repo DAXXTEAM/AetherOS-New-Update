@@ -1,4 +1,4 @@
-"""AetherOS Sandbox — Isolated Code Execution.
+"""AetherOS Sandbox   Isolated Code Execution.
 
 Provides sandboxed environments for safe code execution
 with resource limits, timeout control, and output capture.

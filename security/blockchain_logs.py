@@ -1,33 +1,33 @@
-"""AetherOS Security — Blockchain-Based Immutable Audit Ledger.
+"""AetherOS Security   Blockchain-Based Immutable Audit Ledger.
 
 Implements a private blockchain for tamper-proof audit logging.
 Every security event, system action, and configuration change is
 recorded as a transaction in an immutable chain of blocks.
 
 Architecture:
-    ┌─────────────────────────────────────────────────────────────┐
-    │                BlockchainAuditLedger                        │
-    │  ┌────────────┐  ┌───────────────┐  ┌──────────────────┐  │
-    │  │ Transaction │→ │ Block         │→ │ Chain            │  │
-    │  │ Pool        │  │ Builder       │  │ Validator        │  │
-    │  └────────────┘  └───────────────┘  └──────────────────┘  │
-    │                                                            │
-    │  ┌────────────┐  ┌───────────────┐  ┌──────────────────┐  │
-    │  │ Merkle     │  │ Consensus     │  │ Persistence      │  │
-    │  │ Tree       │  │ Engine        │  │ Layer            │  │
-    │  └────────────┘  └───────────────┘  └──────────────────┘  │
-    └─────────────────────────────────────────────────────────────┘
+     
+                     BlockchainAuditLedger                         
+                 
+         Transaction     Block             Chain                
+         Pool             Builder            Validator            
+                 
+                                                                  
+                 
+         Merkle          Consensus          Persistence          
+         Tree            Engine             Layer                
+                 
+     
 
 Block Structure:
     Block #N
-    ├── header
-    │   ├── index: N
-    │   ├── timestamp: ISO-8601
-    │   ├── previous_hash: SHA-256 of block N-1
-    │   ├── merkle_root: root hash of transactions
-    │   ├── nonce: proof-of-work nonce
-    │   └── difficulty: mining difficulty target
-    └── transactions: List[AuditTransaction]
+      header
+          index: N
+          timestamp: ISO-8601
+          previous_hash: SHA-256 of block N-1
+          merkle_root: root hash of transactions
+          nonce: proof-of-work nonce
+          difficulty: mining difficulty target
+      transactions: List[AuditTransaction]
 """
 from __future__ import annotations
 
@@ -49,9 +49,9 @@ from typing import Any, Callable, Dict, List, Optional, Set, Tuple, Union
 logger = logging.getLogger("security.blockchain")
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # Enums & Constants
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 class TransactionType(Enum):
     """Types of audit transactions."""
@@ -87,9 +87,9 @@ MAX_TRANSACTIONS_PER_BLOCK = 100
 BLOCK_INTERVAL_SECONDS = 30
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # Data Models
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 @dataclass
 class AuditTransaction:
@@ -164,9 +164,9 @@ class AuditTransaction:
         )
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # Merkle Tree
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 class MerkleTree:
     """Binary Merkle Tree for transaction integrity verification.
@@ -253,9 +253,9 @@ class MerkleTree:
         return len(self._leaves)
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # Block
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 @dataclass
 class Block:
@@ -356,12 +356,12 @@ class Block:
         )
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # Blockchain Chain
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 class BlockchainChain:
-    """The blockchain itself — an ordered list of validated blocks."""
+    """The blockchain itself   an ordered list of validated blocks."""
 
     def __init__(self, difficulty: int = DEFAULT_DIFFICULTY):
         self.difficulty = difficulty
@@ -513,9 +513,9 @@ class BlockchainChain:
             return False
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # Transaction Pool
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 class TransactionPool:
     """Pool of pending transactions waiting to be included in a block."""
@@ -561,9 +561,9 @@ class TransactionPool:
             return len(self._pool) == 0
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # Consensus Engine (Single-Node Proof of Work)
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 class ConsensusEngine:
     """Simple proof-of-work consensus for single-node operation.
@@ -601,13 +601,13 @@ class ConsensusEngine:
             new_diff = current
 
         if new_diff != current:
-            logger.info(f"Difficulty adjusted: {current} → {new_diff} (avg mine time: {avg_time:.2f}s)")
+            logger.info(f"Difficulty adjusted: {current}   {new_diff} (avg mine time: {avg_time:.2f}s)")
         return new_diff
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # Blockchain Audit Ledger (Main Interface)
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 class BlockchainAuditLedger:
     """Main interface for blockchain-based audit logging.

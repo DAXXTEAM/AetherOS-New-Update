@@ -1,4 +1,4 @@
-"""Monitoring Operations Tool — System and application monitoring."""
+"""Monitoring Operations Tool   System and application monitoring."""
 from __future__ import annotations
 
 import logging

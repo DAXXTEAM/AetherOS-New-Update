@@ -1,4 +1,4 @@
-"""Service Discovery — Registry for mesh services and capabilities."""
+"""Service Discovery   Registry for mesh services and capabilities."""
 from __future__ import annotations
 
 import logging

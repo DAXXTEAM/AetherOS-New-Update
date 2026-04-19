@@ -178,7 +178,7 @@ class SystemOps(BaseTool):
         checks.append(("Disk space (>1GB)", has_space, f"{disk.free // (1024**3)}GB free"))
 
         output = "\n".join(
-            f"{'✅' if ok else '❌'} {name}: {detail}"
+            f"{' ' if ok else ' '} {name}: {detail}"
             for name, ok, detail in checks
         )
         all_ok = all(ok for _, ok, _ in checks)

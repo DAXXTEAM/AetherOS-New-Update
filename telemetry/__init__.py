@@ -1,4 +1,4 @@
-"""AetherOS Telemetry Module — System metrics, performance monitoring, alerting."""
+"""AetherOS Telemetry Module   System metrics, performance monitoring, alerting."""
 from telemetry.metrics import MetricsCollector, MetricType, MetricPoint, MetricAggregation
 from telemetry.alerting import AlertEngine, AlertRule, AlertCondition, AlertNotification
 from telemetry.dashboard_data import DashboardDataProvider, WidgetData, ChartSeries

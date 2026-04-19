@@ -1,4 +1,4 @@
-"""AetherOS Plugins — Base plugin interface."""
+"""AetherOS Plugins   Base plugin interface."""
 from __future__ import annotations
 
 import enum

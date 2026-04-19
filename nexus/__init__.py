@@ -1,4 +1,4 @@
-"""AetherOS Nexus Module — Voice Command & Vision Presence Detection.
+"""AetherOS Nexus Module   Voice Command & Vision Presence Detection.
 
 The Nexus module provides multimodal interaction capabilities:
 - Voice command processing with speech recognition and TTS feedback

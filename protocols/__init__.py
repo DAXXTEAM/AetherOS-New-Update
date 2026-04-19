@@ -1,4 +1,4 @@
-"""AetherOS Communication Protocols — Secure inter-component messaging."""
+"""AetherOS Communication Protocols   Secure inter-component messaging."""
 from protocols.wire import WireProtocol, SecureChannel, MessageFrame
 from protocols.consensus import RaftConsensus, ConsensusState
 

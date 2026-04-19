@@ -1,4 +1,4 @@
-"""Cryptographic Operations Tool — Provides encryption, signing, and
+"""Cryptographic Operations Tool   Provides encryption, signing, and
 key management operations for agent tasks."""
 from __future__ import annotations
 

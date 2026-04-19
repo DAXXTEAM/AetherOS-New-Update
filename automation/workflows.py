@@ -1,4 +1,4 @@
-"""AetherOS Automation — Workflow Engine.
+"""AetherOS Automation   Workflow Engine.
 
 Defines and executes multi-step automated workflows with
 conditional branching, parallel execution, and error handling.

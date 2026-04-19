@@ -1,4 +1,4 @@
-"""Guardian Agent — Advanced threat response and system protection."""
+"""Guardian Agent   Advanced threat response and system protection."""
 from __future__ import annotations
 
 import json

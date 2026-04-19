@@ -1,4 +1,4 @@
-"""AetherOS Automation Module — Workflow automation, scheduling, macros."""
+"""AetherOS Automation Module   Workflow automation, scheduling, macros."""
 from automation.workflows import WorkflowEngine, Workflow, WorkflowStep, StepType
 from automation.macros import MacroEngine, Macro, MacroAction, MacroTrigger
 from automation.scheduler import TaskScheduler, ScheduledTask, CronParser

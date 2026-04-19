@@ -1,4 +1,4 @@
-"""AetherOS Utilities — Common utility functions and helpers."""
+"""AetherOS Utilities   Common utility functions and helpers."""
 from utils.hashing import HashUtils
 from utils.formatting import FormatUtils
 from utils.timing import Timer, RateLimiter

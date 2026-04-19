@@ -1,4 +1,4 @@
-"""AetherOS GUI Module — Control Panel, Neural Map, Monitoring."""
+"""AetherOS GUI Module   Control Panel, Neural Map, Monitoring."""
 try:
     from gui.control_panel import ControlPanel
     from gui.terminal_widget import TerminalWidget

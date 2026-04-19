@@ -1,4 +1,4 @@
-"""AetherOS Plugins — Plugin Manager."""
+"""AetherOS Plugins   Plugin Manager."""
 from __future__ import annotations
 
 import enum

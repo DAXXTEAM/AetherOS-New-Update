@@ -74,7 +74,7 @@ if HAS_PYQT:
 
             # Security menu
             security_menu = menubar.addMenu("&Security")
-            kill_action = QAction("🚨 &Kill Switch", self)
+            kill_action = QAction("  &Kill Switch", self)
             kill_action.setShortcut("Ctrl+Shift+K")
             kill_action.triggered.connect(self._on_kill_switch)
             security_menu.addAction(kill_action)
@@ -128,7 +128,7 @@ if HAS_PYQT:
 
             # Terminal tab
             self._terminal = TerminalWidget()
-            tabs.addTab(self._terminal, "📟 Terminal")
+            tabs.addTab(self._terminal, "  Terminal")
 
             # Audit tab
             audit_widget = QWidget()
@@ -143,7 +143,7 @@ if HAS_PYQT:
                 border-radius: 6px;
             """)
             audit_layout.addWidget(self._audit_text)
-            tabs.addTab(audit_widget, "🛡️ Audit Log")
+            tabs.addTab(audit_widget, "  Audit Log")
 
             # Memory tab
             memory_widget = QWidget()
@@ -152,7 +152,7 @@ if HAS_PYQT:
             self._memory_search = QLineEdit()
             self._memory_search.setPlaceholderText("Search memories...")
             search_bar.addWidget(self._memory_search)
-            search_btn = QPushButton("🔍 Search")
+            search_btn = QPushButton("  Search")
             search_bar.addWidget(search_btn)
             memory_layout.addLayout(search_bar)
             self._memory_text = QTextEdit()
@@ -162,7 +162,7 @@ if HAS_PYQT:
                 color: {AetherTheme.TERMINAL_FG};
             """)
             memory_layout.addWidget(self._memory_text)
-            tabs.addTab(memory_widget, "💾 Memory")
+            tabs.addTab(memory_widget, "  Memory")
 
             # Tools tab
             tools_widget = QWidget()
@@ -170,7 +170,7 @@ if HAS_PYQT:
             self._tools_text = QTextEdit()
             self._tools_text.setReadOnly(True)
             tools_layout.addWidget(self._tools_text)
-            tabs.addTab(tools_widget, "🔧 Tools")
+            tabs.addTab(tools_widget, "  Tools")
 
             right_layout.addWidget(tabs)
             splitter.addWidget(right_panel)
@@ -190,7 +190,7 @@ if HAS_PYQT:
             """)
             layout = QHBoxLayout(frame)
 
-            logo = QLabel("⚡ AetherOS")
+            logo = QLabel("  AetherOS")
             logo.setStyleSheet(f"color: {AetherTheme.TEXT_ACCENT}; font-size: 22px; font-weight: 700; background: transparent;")
             layout.addWidget(logo)
 
@@ -201,7 +201,7 @@ if HAS_PYQT:
             layout.addStretch()
 
             # Kill Switch button
-            kill_btn = QPushButton("🚨 KILL SWITCH")
+            kill_btn = QPushButton("  KILL SWITCH")
             kill_btn.setObjectName("dangerBtn")
             kill_btn.setFixedWidth(150)
             kill_btn.clicked.connect(self._on_kill_switch)
@@ -210,32 +210,32 @@ if HAS_PYQT:
             return frame
 
         def _create_task_input(self) -> QGroupBox:
-            group = QGroupBox("🎯 Task Input")
+            group = QGroupBox("  Task Input")
             layout = QVBoxLayout(group)
 
             self._task_input = QTextEdit()
             self._task_input.setPlaceholderText(
                 "Describe your task here...\n\n"
                 "Examples:\n"
-                "• Find all Python files larger than 1MB\n"
-                "• Create a new project structure for a Flask app\n"
-                "• Search the web for latest Python security advisories"
+                "  Find all Python files larger than 1MB\n"
+                "  Create a new project structure for a Flask app\n"
+                "  Search the web for latest Python security advisories"
             )
             self._task_input.setMaximumHeight(150)
             layout.addWidget(self._task_input)
 
             btn_layout = QHBoxLayout()
 
-            submit_btn = QPushButton("▶ Execute Task")
+            submit_btn = QPushButton("  Execute Task")
             submit_btn.setObjectName("primaryBtn")
             submit_btn.clicked.connect(self._on_submit)
             btn_layout.addWidget(submit_btn)
 
-            plan_btn = QPushButton("📋 Plan Only")
+            plan_btn = QPushButton("  Plan Only")
             plan_btn.clicked.connect(self._on_plan)
             btn_layout.addWidget(plan_btn)
 
-            clear_btn = QPushButton("🗑 Clear")
+            clear_btn = QPushButton("  Clear")
             clear_btn.clicked.connect(lambda: self._task_input.clear())
             btn_layout.addWidget(clear_btn)
 
@@ -243,7 +243,7 @@ if HAS_PYQT:
             return group
 
         def _create_model_selector(self) -> QGroupBox:
-            group = QGroupBox("🧠 Model Configuration")
+            group = QGroupBox("  Model Configuration")
             layout = QGridLayout(group)
 
             layout.addWidget(QLabel("Provider:"), 0, 0)
@@ -289,13 +289,13 @@ if HAS_PYQT:
         def _on_kill_switch(self) -> None:
             reply = QMessageBox.warning(
                 self,
-                "⚠️ Kill Switch",
+                "  Kill Switch",
                 "This will immediately stop all agent operations.\n\nAre you sure?",
                 QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No,
                 QMessageBox.StandardButton.No,
             )
             if reply == QMessageBox.StandardButton.Yes:
-                self._terminal.append_text("🚨 KILL SWITCH ENGAGED", "CRITICAL")
+                self._terminal.append_text("  KILL SWITCH ENGAGED", "CRITICAL")
                 self.kill_switch_triggered.emit()
 
         def _on_provider_changed(self, provider: str) -> None:
@@ -319,12 +319,12 @@ if HAS_PYQT:
             QMessageBox.about(
                 self,
                 "About AetherOS",
-                "AetherOS v1.0.0 — Prometheus\n\n"
+                "AetherOS v1.0.0   Prometheus\n\n"
                 "Autonomous AI Agent System\n"
                 "Multi-agent orchestration with LangGraph\n"
                 "Quantum-safe cryptography\n"
                 "Real-time monitoring and control\n\n"
-                "© 2024 AetherOS Project",
+                "  2024 AetherOS Project",
             )
 
         def log(self, message: str, level: str = "INFO") -> None:
@@ -334,7 +334,7 @@ if HAS_PYQT:
         def update_audit(self, entries: list[dict]) -> None:
             text = "\n".join(
                 f"[{e.get('timestamp', '')}] [{e.get('severity', '')}] "
-                f"{e.get('action', '')} → {e.get('target', '')}"
+                f"{e.get('action', '')}   {e.get('target', '')}"
                 for e in entries
             )
             self._audit_text.setPlainText(text)

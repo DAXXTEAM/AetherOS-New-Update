@@ -1,45 +1,45 @@
-# AetherOS v3.0 — The Singularity
+# AetherOS v3.0   The Singularity
 
 <div align="center">
 
 ```
-    ╔═══════════════════════════════════════════════════════════════════════╗
-    ║                                                                       ║
-    ║     ░█████╗░███████╗████████╗██╗░░██╗███████╗██████╗░░█████╗░░██████╗ ║
-    ║     ██╔══██╗██╔════╝╚══██╔══╝██║░░██║██╔════╝██╔══██╗██╔══██╗██╔════╝ ║
-    ║     ███████║█████╗░░░░░██║░░░███████║█████╗░░██████╔╝██║░░██║╚█████╗░ ║
-    ║     ██╔══██║██╔══╝░░░░░██║░░░██╔══██║██╔══╝░░██╔══██╗██║░░██║░╚═══██╗ ║
-    ║     ██║░░██║███████╗░░░██║░░░██║░░██║███████╗██║░░██║╚█████╔╝██████╔╝ ║
-    ║     ╚═╝░░╚═╝╚══════╝░░░╚═╝░░░╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝░╚════╝░╚═════╝ ║
-    ║                                                                       ║
-    ║              ████████╗██╗░░██╗███████╗                                ║
-    ║              ╚══██╔══╝██║░░██║██╔════╝                                ║
-    ║              ░░░██║░░░███████║█████╗░░                                ║
-    ║              ░░░██║░░░██╔══██║██╔══╝░░                                ║
-    ║              ░░░██║░░░██║░░██║███████╗                                ║
-    ║              ░░░╚═╝░░░╚═╝░░╚═╝╚══════╝                                ║
-    ║                                                                       ║
-    ║     ░██████╗██╗███╗░░██╗░██████╗░██╗░░░██╗██╗░░░░░░█████╗░██████╗░  ║
-    ║     ██╔════╝██║████╗░██║██╔════╝░██║░░░██║██║░░░░░██╔══██╗██╔══██╗  ║
-    ║     ╚█████╗░██║██╔██╗██║██║░░██╗░██║░░░██║██║░░░░░███████║██████╔╝  ║
-    ║     ░╚═══██╗██║██║╚████║██║░░╚██╗██║░░░██║██║░░░░░██╔══██║██╔══██╗  ║
-    ║     ██████╔╝██║██║░╚███║╚██████╔╝╚██████╔╝███████╗██║░░██║██║░░██║  ║
-    ║     ╚═════╝░╚═╝╚═╝░░╚══╝░╚═════╝░░╚═════╝░╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝  ║
-    ║                                                                       ║
-    ║         ██╗████████╗██╗░░░██╗                                         ║
-    ║         ██║╚══██╔══╝╚██╗░██╔╝                                         ║
-    ║         ██║░░░██║░░░░╚████╔╝░                                         ║
-    ║         ██║░░░██║░░░░░╚██╔╝░░                                         ║
-    ║         ██║░░░██║░░░░░░██║░░░                                         ║
-    ║         ╚═╝░░░╚═╝░░░░░░╚═╝░░░                                         ║
-    ║                                                                       ║
-    ╚═══════════════════════════════════════════════════════════════════════╝
+     
+                                                                             
+             
+             
+             
+             
+             
+             
+                                                                             
+                                                     
+                                                     
+                                                     
+                                                     
+                                                     
+                                                     
+                                                                             
+              
+              
+              
+              
+              
+              
+                                                                             
+                                                         
+                                                         
+                                                         
+                                                         
+                                                         
+                                                         
+                                                                             
+     
 
-          ┌─────────────────────────────────────────────────────────┐
-          │  Post-Quantum · Self-Evolving · Blockchain-Secured     │
-          │  Voice-Controlled · Vision-Aware · Multi-Language      │
-          │  OSINT-Hunting · Honeypot-Fortified · Plugin-Ready     │
-          └─────────────────────────────────────────────────────────┘
+           
+             Post-Quantum   Self-Evolving   Blockchain-Secured      
+             Voice-Controlled   Vision-Aware   Multi-Language       
+             OSINT-Hunting   Honeypot-Fortified   Plugin-Ready      
+           
 ```
 
 **Codename: The Singularity**
@@ -56,232 +56,232 @@
 
 ---
 
-## 🌌 What is AetherOS?
+##   What is AetherOS?
 
-**AetherOS v3.0 "The Singularity"** is an **ultra-advanced autonomous AI agent operating system** that pushes the boundaries of what's possible in autonomous computing. It's not just a tool — it's a self-evolving, self-defending, voice-controlled AI brain.
+**AetherOS v3.0 "The Singularity"** is an **ultra-advanced autonomous AI agent operating system** that pushes the boundaries of what's possible in autonomous computing. It's not just a tool   it's a self-evolving, self-defending, voice-controlled AI brain.
 
 ```
-┌──────────────────────────────────────────────────────────────────────┐
-│                        AetherOS v3.0 Architecture                    │
-│                                                                      │
-│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐           │
-│  │  NEXUS   │  │ SECURITY │  │  INTEL   │  │  CORE    │           │
-│  │ Voice    │  │ Blockchain│  │ OSINT    │  │ Agents   │           │
-│  │ Vision   │  │ Honeypot │  │ Scanner  │  │ Pipeline │           │
-│  │ Gesture  │  │ Sentinel │  │ IOC DB   │  │ Events   │           │
-│  │ Ambient  │  │ Crypto   │  │ Threats  │  │ Tasks    │           │
-│  └────┬─────┘  └────┬─────┘  └────┬─────┘  └────┬─────┘           │
-│       │              │              │              │                 │
-│       └──────────────┴──────────────┴──────────────┘                │
-│                              │                                       │
-│  ┌──────────┐  ┌──────────┐ │ ┌──────────┐  ┌──────────┐           │
-│  │ TELEMETRY│  │ PLUGINS  │ │ │  MEMORY  │  │   GUI    │           │
-│  │ Metrics  │  │ Manager  │ │ │ ChromaDB │  │ Control  │           │
-│  │ Alerts   │  │ Registry │ │ │ KnowGraph│  │ Neural   │           │
-│  │ Dashboard│  │ Hooks    │ │ │ Context  │  │ Theme    │           │
-│  └──────────┘  └──────────┘ │ └──────────┘  └──────────┘           │
-│                              │                                       │
-│  ┌──────────┐  ┌──────────┐ │ ┌──────────┐  ┌──────────┐           │
-│  │   API    │  │   NET    │ │ │  LOCALE  │  │ EVOLUTION│           │
-│  │ REST     │  │ Mesh     │ │ │ EN/HI/ES │  │ Self-Heal│           │
-│  │ WebSocket│  │ P2P      │ │ │ i18n     │  │ Patches  │           │
-│  │ Auth     │  │ Consensus│ │ │ Plurals  │  │ AST      │           │
-│  └──────────┘  └──────────┘   └──────────┘  └──────────┘           │
-└──────────────────────────────────────────────────────────────────────┘
+ 
+                         AetherOS v3.0 Architecture                     
+                                                                        
+                         
+      NEXUS        SECURITY       INTEL         CORE                 
+     Voice         Blockchain     OSINT         Agents                
+     Vision        Honeypot      Scanner       Pipeline              
+     Gesture       Sentinel      IOC DB        Events                
+     Ambient       Crypto        Threats       Tasks                 
+                         
+                                                                        
+                          
+                                                                        
+                          
+     TELEMETRY     PLUGINS         MEMORY         GUI                 
+     Metrics       Manager        ChromaDB      Control               
+     Alerts        Registry       KnowGraph     Neural                
+     Dashboard     Hooks          Context       Theme                 
+                          
+                                                                        
+                          
+       API           NET           LOCALE       EVOLUTION             
+     REST          Mesh           EN/HI/ES      Self-Heal             
+     WebSocket     P2P            i18n          Patches               
+     Auth          Consensus      Plurals       AST                   
+                          
+ 
 ```
 
 ---
 
-## 🚀 What's New in v3.0
+##   What's New in v3.0
 
-### 🗣️ Aether Nexus — Voice & Vision Control
+###   Aether Nexus   Voice & Vision Control
 - **Voice Commands**: Full speech recognition pipeline with wake word detection ("Hey Aether"), multi-backend STT (Google, Sphinx, Whisper), and TTS feedback via pyttsx3
 - **Vision Presence Detection**: Webcam-based operator presence detection with face recognition, automatic lockdown when operator leaves, and unauthorized person alerts
 - **Gesture Control**: Hand gesture recognition for touchless system control (thumbs up to confirm, open palm to stop, swipe to navigate)
 - **Ambient Sound Classification**: Environmental awareness through sound classification (speech, typing, alarms)
 - **Multimodal Fusion**: Weighted fusion of all input modalities for intelligent context-aware control
 
-### ⛓️ Blockchain Integrity Ledger
+###   Blockchain Integrity Ledger
 - **Private Blockchain**: Full blockchain implementation with SHA-256 proof-of-work mining
 - **Merkle Trees**: O(log n) transaction verification with tamper-proof proofs
 - **Immutable Audit Logs**: Every security event, config change, and system action permanently recorded
 - **Auto-Mining**: Background block creation at configurable intervals with adaptive difficulty
 - **Chain Verification**: Complete chain integrity validation on demand
 
-### 🍯 Honeypot Intrusion Detection
+###   Honeypot Intrusion Detection
 - **File Honeypots**: Realistic decoy files (fake passwords, SSH keys, .env files)
 - **Directory Honeypots**: Multi-level bait directory structures
 - **Credential Honeypots**: Canary tokens that alert when fake credentials are used
 - **Continuous Monitoring**: Background monitoring with tamper/access/deletion detection
 - **Alert Management**: Severity-classified alerts with callback integration
 
-### 🔍 OSINT Intelligence Scanner
+###   OSINT Intelligence Scanner
 - **Credential Leak Monitoring**: Simulated dark web scanning for leaked credentials
 - **Threat Intelligence Feeds**: Aggregated IOC data from simulated MISP, OTX, VirusTotal
 - **IOC Database**: Local database of Indicators of Compromise (IPs, domains, hashes)
 - **Intelligence Reports**: Automated threat assessment reports with recommendations
 - **Continuous Scanning**: Background monitoring with configurable scan intervals
 
-### 🌍 Multi-Language Support
-- **English** (en) — Default language
-- **हिंदी** (hi) — Full Hindi translation with proper Unicode
-- **Español** (es) — Complete Spanish localization
+###   Multi-Language Support
+- **English** (en)   Default language
+- ** ** (hi)   Full Hindi translation with proper Unicode
+- **Espa ol** (es)   Complete Spanish localization
 - Full GUI and CLI localization with 100+ translation keys per language
 
-### 📊 Telemetry & Monitoring
+###   Telemetry & Monitoring
 - System metrics collection (CPU, memory, disk, load)
 - Custom metric registration and aggregation
 - Threshold-based alerting with configurable rules
 - Dashboard data provider for GUI widgets
 
-### 🔌 Plugin Architecture
+###   Plugin Architecture
 - Dynamic plugin loading and lifecycle management
 - Hook-based extension points (boot, shutdown, task events)
 - Capability-based plugin classification
 - Dependency resolution
 
-### 🌐 REST API & WebSocket
+###   REST API & WebSocket
 - Built-in HTTP API server for remote management
 - WebSocket support for real-time event streaming
 - Route-based handler registration
 
 ---
 
-## 📁 Project Structure (150+ Files)
+##   Project Structure (150+ Files)
 
 ```
 aetheros/
-├── aetheros.py                    # Main entry point
-├── README.md                      # This file
-├── WHITE_PAPER.md                 # Technical whitepaper
-├── TECH_SPEC_v3.md                # v3.0 Technical Specification
-├── requirements.txt               # Dependencies
-│
-├── core/                          # Core orchestration engine
-│   ├── orchestrator.py            # LangGraph state machine
-│   ├── event_bus.py               # Pub/sub event system
-│   ├── model_manager.py           # Multi-provider LLM abstraction
-│   ├── pipeline.py                # Task execution pipeline
-│   ├── scheduler.py               # Task scheduling
-│   ├── state.py                   # System state management
-│   ├── evolution.py               # Self-evolution engine
-│   ├── mesh.py                    # Distributed mesh networking
-│   ├── quantum_engine.py          # Quantum computing simulation
-│   └── task.py                    # Task data models
-│
-├── agents/                        # AI Agent definitions
-│   ├── base.py                    # Base agent class
-│   ├── architect.py               # System design agent
-│   ├── executor.py                # Task execution agent
-│   ├── auditor.py                 # Quality assurance agent
-│   ├── researcher.py              # Research & analysis agent
-│   ├── guardian.py                # Security monitoring agent
-│   └── team.py                    # Multi-agent coordination
-│
-├── nexus/                         # 🆕 Multimodal interaction
-│   ├── voice.py                   # Voice command processing
-│   ├── vision.py                  # Webcam presence detection
-│   ├── gesture.py                 # Hand gesture recognition
-│   ├── ambient.py                 # Ambient sound classification
-│   └── multimodal.py              # Multimodal fusion engine
-│
-├── security/                      # Security subsystem
-│   ├── crypto.py                  # Post-quantum cryptography
-│   ├── audit.py                   # Audit logging
-│   ├── kill_switch.py             # Emergency kill switch
-│   ├── policy.py                  # Security policy engine
-│   ├── sentinel.py                # Cyber defense sentinel
-│   ├── biometric.py               # Biometric authentication
-│   ├── blockchain_logs.py         # 🆕 Blockchain audit ledger
-│   └── honeypot.py                # 🆕 Honeypot intrusion detection
-│
-├── intel/                         # 🆕 Intelligence module
-│   └── osint_scanner.py           # OSINT & threat intelligence
-│
-├── localization/                  # 🆕 Multi-language support
-│   ├── i18n.py                    # Internationalization engine
-│   └── locale_data.py             # Translation strings (EN/HI/ES)
-│
-├── telemetry/                     # 🆕 Metrics & monitoring
-│   ├── metrics.py                 # Metrics collection
-│   ├── alerting.py                # Alert engine
-│   └── dashboard_data.py          # Dashboard data provider
-│
-├── plugins/                       # 🆕 Plugin system
-│   ├── base.py                    # Plugin base class
-│   ├── manager.py                 # Plugin lifecycle manager
-│   └── registry.py                # Plugin registry
-│
-├── api/                           # 🆕 REST API & WebSocket
-│   ├── rest_server.py             # HTTP API server
-│   └── websocket_handler.py       # WebSocket manager
-│
-├── memory/                        # Memory & knowledge
-│   ├── chroma_store.py            # ChromaDB vector store
-│   ├── context.py                 # Context management
-│   ├── embeddings.py              # Text embeddings
-│   ├── knowledge_graph.py         # Knowledge graph
-│   └── preferences.py             # User preferences
-│
-├── tools/                         # Tool implementations
-│   ├── base.py                    # Tool registry
-│   ├── file_ops.py                # File operations
-│   ├── shell_ops.py               # Shell commands
-│   ├── vision_ops.py              # Vision tools
-│   ├── web_ops.py                 # Web operations
-│   ├── crypto_ops.py              # Crypto tools
-│   ├── monitor_ops.py             # System monitoring
-│   ├── data_ops.py                # Data processing
-│   └── system_ops.py              # System operations
-│
-├── gui/                           # GUI components
-│   ├── control_panel.py           # Main control panel
-│   ├── terminal_widget.py         # Terminal emulator
-│   ├── status_monitor.py          # Status dashboard
-│   ├── neural_map.py              # Neural visualization
-│   └── theme.py                   # UI theming
-│
-├── net/                           # Networking
-│   ├── transport.py               # Network transport
-│   └── service_discovery.py       # P2P discovery
-│
-├── protocols/                     # Communication protocols
-│   ├── consensus.py               # Raft consensus
-│   └── wire.py                    # Wire protocol
-│
-├── config/                        # Configuration
-│   ├── constants.py               # Global constants
-│   ├── settings.py                # Settings management
-│   ├── defaults.yaml              # Default config
-│   └── logging_config.py          # Logging setup
-│
-├── scripts/                       # Utility scripts
-│   ├── boot.sh                    # Boot script
-│   ├── install.sh                 # Installation
-│   ├── benchmark.py               # Benchmarks
-│   └── health_check.py            # Health checks
-│
-├── tests/                         # Test suite
-│   ├── test_blockchain.py         # 🆕 Blockchain tests
-│   ├── test_honeypot.py           # 🆕 Honeypot tests
-│   ├── test_osint.py              # 🆕 OSINT tests
-│   ├── test_nexus.py              # 🆕 Voice/Vision tests
-│   ├── test_localization.py       # 🆕 i18n tests
-│   ├── test_telemetry.py          # 🆕 Telemetry tests
-│   ├── test_plugins.py            # 🆕 Plugin tests
-│   ├── test_core.py               # Core tests
-│   ├── test_agents.py             # Agent tests
-│   ├── test_security.py           # Security tests
-│   ├── test_memory.py             # Memory tests
-│   ├── test_tools.py              # Tool tests
-│   └── ...                        # Additional tests
-│
-└── logs/                          # Log output directory
+  aetheros.py                    # Main entry point
+  README.md                      # This file
+  WHITE_PAPER.md                 # Technical whitepaper
+  TECH_SPEC_v3.md                # v3.0 Technical Specification
+  requirements.txt               # Dependencies
+ 
+  core/                          # Core orchestration engine
+      orchestrator.py            # LangGraph state machine
+      event_bus.py               # Pub/sub event system
+      model_manager.py           # Multi-provider LLM abstraction
+      pipeline.py                # Task execution pipeline
+      scheduler.py               # Task scheduling
+      state.py                   # System state management
+      evolution.py               # Self-evolution engine
+      mesh.py                    # Distributed mesh networking
+      quantum_engine.py          # Quantum computing simulation
+      task.py                    # Task data models
+ 
+  agents/                        # AI Agent definitions
+      base.py                    # Base agent class
+      architect.py               # System design agent
+      executor.py                # Task execution agent
+      auditor.py                 # Quality assurance agent
+      researcher.py              # Research & analysis agent
+      guardian.py                # Security monitoring agent
+      team.py                    # Multi-agent coordination
+ 
+  nexus/                         #   Multimodal interaction
+      voice.py                   # Voice command processing
+      vision.py                  # Webcam presence detection
+      gesture.py                 # Hand gesture recognition
+      ambient.py                 # Ambient sound classification
+      multimodal.py              # Multimodal fusion engine
+ 
+  security/                      # Security subsystem
+      crypto.py                  # Post-quantum cryptography
+      audit.py                   # Audit logging
+      kill_switch.py             # Emergency kill switch
+      policy.py                  # Security policy engine
+      sentinel.py                # Cyber defense sentinel
+      biometric.py               # Biometric authentication
+      blockchain_logs.py         #   Blockchain audit ledger
+      honeypot.py                #   Honeypot intrusion detection
+ 
+  intel/                         #   Intelligence module
+      osint_scanner.py           # OSINT & threat intelligence
+ 
+  localization/                  #   Multi-language support
+      i18n.py                    # Internationalization engine
+      locale_data.py             # Translation strings (EN/HI/ES)
+ 
+  telemetry/                     #   Metrics & monitoring
+      metrics.py                 # Metrics collection
+      alerting.py                # Alert engine
+      dashboard_data.py          # Dashboard data provider
+ 
+  plugins/                       #   Plugin system
+      base.py                    # Plugin base class
+      manager.py                 # Plugin lifecycle manager
+      registry.py                # Plugin registry
+ 
+  api/                           #   REST API & WebSocket
+      rest_server.py             # HTTP API server
+      websocket_handler.py       # WebSocket manager
+ 
+  memory/                        # Memory & knowledge
+      chroma_store.py            # ChromaDB vector store
+      context.py                 # Context management
+      embeddings.py              # Text embeddings
+      knowledge_graph.py         # Knowledge graph
+      preferences.py             # User preferences
+ 
+  tools/                         # Tool implementations
+      base.py                    # Tool registry
+      file_ops.py                # File operations
+      shell_ops.py               # Shell commands
+      vision_ops.py              # Vision tools
+      web_ops.py                 # Web operations
+      crypto_ops.py              # Crypto tools
+      monitor_ops.py             # System monitoring
+      data_ops.py                # Data processing
+      system_ops.py              # System operations
+ 
+  gui/                           # GUI components
+      control_panel.py           # Main control panel
+      terminal_widget.py         # Terminal emulator
+      status_monitor.py          # Status dashboard
+      neural_map.py              # Neural visualization
+      theme.py                   # UI theming
+ 
+  net/                           # Networking
+      transport.py               # Network transport
+      service_discovery.py       # P2P discovery
+ 
+  protocols/                     # Communication protocols
+      consensus.py               # Raft consensus
+      wire.py                    # Wire protocol
+ 
+  config/                        # Configuration
+      constants.py               # Global constants
+      settings.py                # Settings management
+      defaults.yaml              # Default config
+      logging_config.py          # Logging setup
+ 
+  scripts/                       # Utility scripts
+      boot.sh                    # Boot script
+      install.sh                 # Installation
+      benchmark.py               # Benchmarks
+      health_check.py            # Health checks
+ 
+  tests/                         # Test suite
+      test_blockchain.py         #   Blockchain tests
+      test_honeypot.py           #   Honeypot tests
+      test_osint.py              #   OSINT tests
+      test_nexus.py              #   Voice/Vision tests
+      test_localization.py       #   i18n tests
+      test_telemetry.py          #   Telemetry tests
+      test_plugins.py            #   Plugin tests
+      test_core.py               # Core tests
+      test_agents.py             # Agent tests
+      test_security.py           # Security tests
+      test_memory.py             # Memory tests
+      test_tools.py              # Tool tests
+      ...                        # Additional tests
+ 
+  logs/                          # Log output directory
 ```
 
 ---
 
-## 🔧 Installation
+##   Installation
 
 ```bash
 # Clone the repository
@@ -303,9 +303,9 @@ python aetheros.py
 
 ---
 
-## 📖 Usage Guide
+##   Usage Guide
 
-### English 🇬🇧
+### English  
 
 ```bash
 # Interactive CLI mode
@@ -327,26 +327,26 @@ python aetheros.py --lang en
 python aetheros.py --status
 ```
 
-### हिंदी 🇮🇳
+###    
 
 ```bash
-# इंटरैक्टिव CLI मोड
+#   CLI  
 python aetheros.py --lang hi
 
-# GUI के साथ लॉन्च करें
+# GUI        
 python aetheros.py --gui --lang hi
 
-# एक कार्य निष्पादित करें
-python aetheros.py --task "इस कोडबेस की सुरक्षा का विश्लेषण करें" --lang hi
+#        
+python aetheros.py --task "             " --lang hi
 
-# वॉइस कंट्रोल के साथ चलाएं
+#          
 python aetheros.py --nexus --lang hi
 
-# सिस्टम स्थिति देखें
+#      
 python aetheros.py --status --lang hi
 ```
 
-### Español 🇪🇸
+### Espa ol  
 
 ```bash
 # Modo CLI interactivo
@@ -356,7 +356,7 @@ python aetheros.py --lang es
 python aetheros.py --gui --lang es
 
 # Ejecutar una tarea
-python aetheros.py --task "Analizar la seguridad de este código" --lang es
+python aetheros.py --task "Analizar la seguridad de este c digo" --lang es
 
 # Ejecutar con control de voz
 python aetheros.py --nexus --lang es
@@ -368,7 +368,7 @@ python aetheros.py --status --lang es
 ---
 
 
-## 📸 Usage Gallery
+##   Usage Gallery
 
 <table align="center">
   <tr>
@@ -395,7 +395,7 @@ python aetheros.py --status --lang es
 
 ---
 
-## 🧪 Running Tests
+##   Running Tests
 
 ```bash
 # Run all tests
@@ -416,7 +416,7 @@ python -m pytest tests/ --cov=. --cov-report=html
 
 ---
 
-## 🏗️ Architecture Deep Dive
+##   Architecture Deep Dive
 
 ### Multi-Agent Orchestration
 AetherOS uses a LangGraph-based state machine to coordinate specialized AI agents:
@@ -442,25 +442,25 @@ The system can autonomously:
 
 ---
 
-## 📄 License
+##   License
 
-Proprietary — DAXX Team. All rights reserved.
+Proprietary   DAXX Team. All rights reserved.
 
-## 👤 Author
+##   Author
 
-**Arpit-DAXX** — [admin@daxxteam.io](mailto:admin@daxxteam.io)
+**Arpit-DAXX**   [admin@daxxteam.io](mailto:admin@daxxteam.io)
 
 ---
 
 <div align="center">
 
 ```
- ═══════════════════════════════════════════════════════════
- ║  AetherOS v3.0 — The Singularity                      ║
- ║  "Beyond automation. Beyond intelligence. Beyond AI."  ║
- ═══════════════════════════════════════════════════════════
+  
+    AetherOS v3.0   The Singularity                       
+    "Beyond automation. Beyond intelligence. Beyond AI."   
+  
 ```
 
-**Built with 💜 by DAXX Team**
+**Built with   by DAXX Team**
 
 </div>

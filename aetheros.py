@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""AetherOS v2.0 — Ultra-Advanced Autonomous AI Agent System.
+"""AetherOS v2.0   Ultra-Advanced Autonomous AI Agent System.
 
 Post-Quantum Agentic OS with multi-agent orchestration, self-evolution,
 cyber-defense sentinel, distributed mesh networking, biometric command
@@ -77,31 +77,31 @@ logger = get_logger("boot")
 
 
 BANNER = f"""
-╔══════════════════════════════════════════════════════════════╗
-║                                                              ║
-║     ░█████╗░███████╗████████╗██╗░░██╗███████╗██████╗░       ║
-║     ██╔══██╗██╔════╝╚══██╔══╝██║░░██║██╔════╝██╔══██╗      ║
-║     ███████║█████╗░░░░░██║░░░███████║█████╗░░██████╔╝       ║
-║     ██╔══██║██╔══╝░░░░░██║░░░██╔══██║██╔══╝░░██╔══██╗      ║
-║     ██║░░██║███████╗░░░██║░░░██║░░██║███████╗██║░░██║       ║
-║     ╚═╝░░╚═╝╚══════╝░░░╚═╝░░░╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝    ║
-║                          ░█████╗░░██████╗                    ║
-║                          ██╔══██╗██╔════╝                    ║
-║                          ██║░░██║╚█████╗░                    ║
-║                          ██║░░██║░╚═══██╗                    ║
-║                          ╚█████╔╝██████╔╝                    ║
-║                          ░╚════╝░╚═════╝                     ║
-║                                                              ║
-║  {SYSTEM_NAME} v{SYSTEM_VERSION} — Codename: {SYSTEM_CODENAME:25s}   ║
-║  Ultra-Advanced Autonomous AI Agent System                   ║
-║  Post-Quantum | Self-Evolving | Mesh-Distributed             ║
-║                                                              ║
-╚══════════════════════════════════════════════════════════════╝
+ 
+                                                                
+               
+              
+               
+              
+               
+            
+                                                 
+                                                 
+                                                 
+                                                 
+                                                 
+                                                  
+                                                                
+   {SYSTEM_NAME} v{SYSTEM_VERSION}   Codename: {SYSTEM_CODENAME:25s}    
+   Ultra-Advanced Autonomous AI Agent System                    
+   Post-Quantum | Self-Evolving | Mesh-Distributed              
+                                                                
+ 
 """
 
 
 class AetherOS:
-    """Main AetherOS v2.0 system class — orchestrates all components."""
+    """Main AetherOS v2.0 system class   orchestrates all components."""
 
     def __init__(self, config: AetherConfig, enable_mesh: bool = False,
                  enable_sentinel: bool = True, enable_evolution: bool = True):
@@ -226,7 +226,7 @@ class AetherOS:
         self.kill_switch.start_monitoring()
         self._setup_event_handlers()
 
-        logger.info(f"✅ {SYSTEM_NAME} v{SYSTEM_VERSION} initialization complete — Ultra-Advanced mode")
+        logger.info(f"  {SYSTEM_NAME} v{SYSTEM_VERSION} initialization complete   Ultra-Advanced mode")
 
     def _register_tools(self) -> None:
         self.tool_registry.register(FileOps(
@@ -247,7 +247,7 @@ class AetherOS:
 
     def _setup_event_handlers(self) -> None:
         async def on_security_alert(event: Event):
-            logger.warning(f"🔒 Security Alert: {event.data}")
+            logger.warning(f"  Security Alert: {event.data}")
             self.audit.log_security_event(
                 f"Alert: {event.data.get('risk_level', 'UNKNOWN')}",
                 details=event.data,
@@ -282,7 +282,7 @@ class AetherOS:
         self.event_bus.subscribe(EventType.AGENT_DEACTIVATED, on_agent_deactivated)
 
     def _on_kill_switch(self, event) -> None:
-        logger.critical("🚨 KILL SWITCH ENGAGED - Halting all operations")
+        logger.critical("  KILL SWITCH ENGAGED - Halting all operations")
         self.system_state.engage_kill_switch()
         self.audit.log_security_event(
             "KILL_SWITCH_ENGAGED",
@@ -301,7 +301,7 @@ class AetherOS:
         task = Task(objective=objective, context=context, priority=priority)
         self.kill_switch.heartbeat()
 
-        logger.info(f"📝 New task: {task.task_id} — {objective[:80]}")
+        logger.info(f"  New task: {task.task_id}   {objective[:80]}")
         self.audit.log_command(f"task:{objective[:100]}", actor="user")
 
         # Register in neural map
@@ -421,7 +421,7 @@ class AetherOS:
                 status = self.get_system_status()
                 print(json.dumps(status, indent=2, default=str))
             elif user_input.lower() == "evolve":
-                print("🧬 Running self-evolution cycle...")
+                print("  Running self-evolution cycle...")
                 result = await self.run_evolution_cycle()
                 print(json.dumps(result, indent=2, default=str))
             elif user_input.lower() == "sentinel":
@@ -440,17 +440,17 @@ class AetherOS:
                 print(f"Neural map exported to: {path}")
             elif user_input.lower() == "kill":
                 self.kill_switch.engage("cli", "User initiated from CLI")
-                print("🚨 Kill switch engaged!")
+                print("  Kill switch engaged!")
             elif user_input.lower() == "unkill":
                 self.kill_switch.disengage("cli-auth")
                 print("Kill switch disengaged, entering cooldown")
             elif user_input.lower() == "tools":
                 for t in self.tool_registry.list_tools():
-                    print(f"  🔧 {t['name']}: {t['description']} (runs: {t['stats']['executions']})")
+                    print(f"    {t['name']}: {t['description']} (runs: {t['stats']['executions']})")
             elif user_input.lower() == "audit":
                 entries = self.audit.get_entries(last_n=20)
                 for e in entries:
-                    print(f"  [{e['timestamp']}] [{e['severity']}] {e['action']} → {e['target'][:60]}")
+                    print(f"  [{e['timestamp']}] [{e['severity']}] {e['action']}   {e['target'][:60]}")
             elif user_input.lower().startswith("remember "):
                 text = user_input[9:]
                 mid = self.memory.store_text(text, category="user_note", importance=0.8)
@@ -472,12 +472,12 @@ class AetherOS:
                     except ValueError:
                         print(f"Unknown provider: {parts[1]}")
             else:
-                print(f"\n🚀 Executing: {user_input[:80]}...")
+                print(f"\n  Executing: {user_input[:80]}...")
                 result = await self.execute_task(user_input)
-                print(f"\n{'✅' if result.get('success') else '❌'} Result:")
+                print(f"\n{' ' if result.get('success') else ' '} Result:")
                 print(result.get("output", result.get("error", "No output")))
                 if result.get("metrics"):
-                    print(f"\n📊 Metrics: {json.dumps(result['metrics'], indent=2)}")
+                    print(f"\n  Metrics: {json.dumps(result['metrics'], indent=2)}")
                 print()
 
         self.shutdown()
@@ -545,7 +545,7 @@ AetherOS v2.0 Ultra-Advanced Commands:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description=f"{SYSTEM_NAME} v{SYSTEM_VERSION} — Ultra-Advanced Autonomous AI Agent System",
+        description=f"{SYSTEM_NAME} v{SYSTEM_VERSION}   Ultra-Advanced Autonomous AI Agent System",
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
     parser.add_argument("--gui", action="store_true", help="Launch GUI control panel")

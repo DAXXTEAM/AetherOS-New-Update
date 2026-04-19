@@ -24,7 +24,7 @@ if HAS_PYQT:
     class StatusCard(QFrame):
         """Individual status metric card."""
 
-        def __init__(self, title: str, icon: str = "📊", parent=None):
+        def __init__(self, title: str, icon: str = " ", parent=None):
             super().__init__(parent)
             self.setStyleSheet(f"""
                 QFrame {{
@@ -86,7 +86,7 @@ if HAS_PYQT:
             layout.setSpacing(12)
 
             # Title
-            title = QLabel("📡 System Status")
+            title = QLabel("  System Status")
             title.setStyleSheet(
                 f"color: {AetherTheme.TEXT_ACCENT}; font-weight: 600; font-size: 14px;"
             )
@@ -96,14 +96,14 @@ if HAS_PYQT:
             cards_layout = QGridLayout()
             cards_layout.setSpacing(8)
 
-            self._status_card = StatusCard("System Status", "🔵")
-            self._tasks_card = StatusCard("Active Tasks", "📋")
-            self._completed_card = StatusCard("Completed", "✅")
-            self._errors_card = StatusCard("Errors", "❌")
-            self._model_card = StatusCard("Active Model", "🧠")
-            self._uptime_card = StatusCard("Uptime", "⏱️")
-            self._memory_card = StatusCard("Memory Entries", "💾")
-            self._security_card = StatusCard("Security", "🛡️")
+            self._status_card = StatusCard("System Status", " ")
+            self._tasks_card = StatusCard("Active Tasks", " ")
+            self._completed_card = StatusCard("Completed", " ")
+            self._errors_card = StatusCard("Errors", " ")
+            self._model_card = StatusCard("Active Model", " ")
+            self._uptime_card = StatusCard("Uptime", " ")
+            self._memory_card = StatusCard("Memory Entries", " ")
+            self._security_card = StatusCard("Security", " ")
 
             cards_layout.addWidget(self._status_card, 0, 0)
             cards_layout.addWidget(self._tasks_card, 0, 1)
@@ -117,13 +117,13 @@ if HAS_PYQT:
             layout.addLayout(cards_layout)
 
             # Agent status section
-            agents_group = QGroupBox("🤖 Agent Status")
+            agents_group = QGroupBox("  Agent Status")
             self._agents_layout = QVBoxLayout(agents_group)
             self._agent_labels: dict[str, QLabel] = {}
             layout.addWidget(agents_group)
 
             # Task progress
-            progress_group = QGroupBox("📊 Current Task Progress")
+            progress_group = QGroupBox("  Current Task Progress")
             progress_layout = QVBoxLayout(progress_group)
 
             self._task_label = QLabel("No active task")
@@ -173,7 +173,7 @@ if HAS_PYQT:
 
             kill_switch = state.get("kill_switch", False)
             self._security_card.set_value(
-                "🔴 KILLED" if kill_switch else "🟢 ARMED",
+                "  KILLED" if kill_switch else "  ARMED",
                 color=AetherTheme.CRITICAL if kill_switch else AetherTheme.SUCCESS,
             )
 
@@ -188,8 +188,8 @@ if HAS_PYQT:
                 role = agent_data.get("role", "")
                 msgs = agent_data.get("messages_processed", 0)
                 self._agent_labels[name].setText(
-                    f"{'🟢' if a_status == 'active' else '⚪'} "
-                    f"{name.title()} ({role}) — {a_status} | {msgs} msgs"
+                    f"{' ' if a_status == 'active' else ' '} "
+                    f"{name.title()} ({role})   {a_status} | {msgs} msgs"
                 )
 
         def update_progress(self, task_name: str, progress: float) -> None:

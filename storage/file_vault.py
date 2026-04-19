@@ -1,4 +1,4 @@
-"""AetherOS Storage — Encrypted File Vault.
+"""AetherOS Storage   Encrypted File Vault.
 
 Secure file storage with metadata tracking.
 """

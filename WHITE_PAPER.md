@@ -2,7 +2,7 @@
 
 ## Post-Quantum Agentic Operating System Architecture
 
-**Version:** 2.0.0 — Codename: Prometheus Ultra  
+**Version:** 2.0.0   Codename: Prometheus Ultra  
 **Classification:** Technical Reference  
 **Date:** April 2026
 
@@ -18,17 +18,17 @@ AetherOS is an autonomous AI agent operating system that combines multi-agent or
 
 ### 1.1 Motivation
 
-The convergence of large language models (LLMs), autonomous agents, and post-quantum cryptography creates an opportunity for a new class of operating system — one where AI agents collaborate to accomplish complex tasks while maintaining cryptographic security guarantees that survive the advent of fault-tolerant quantum computers.
+The convergence of large language models (LLMs), autonomous agents, and post-quantum cryptography creates an opportunity for a new class of operating system   one where AI agents collaborate to accomplish complex tasks while maintaining cryptographic security guarantees that survive the advent of fault-tolerant quantum computers.
 
 ### 1.2 Design Principles
 
-1. **Autonomous Multi-Agent Orchestration** — Tasks are decomposed, executed, and audited by specialized AI agents coordinated through a LangGraph-based state machine.
-2. **Post-Quantum Security by Default** — All cryptographic operations use NIST PQC standards (Kyber KEM, Dilithium signatures) with classical fallbacks.
-3. **Self-Evolution** — The system can analyze its own execution failures, generate code patches, validate them at the AST level, and apply them atomically.
-4. **Defense in Depth** — A Cyber-Defense Sentinel provides real-time network monitoring, firewall simulation, and automated threat response.
-5. **Distributed by Design** — A P2P mesh network enables multiple AetherOS instances to discover each other, share workloads, and reach consensus.
-6. **Biometric Command Approval** — Critical operations require multi-factor biometric authentication through the YoKiMo engine.
-7. **Observable Intelligence** — A Neural Visualization system renders the chain of thought as a real-time interactive graph.
+1. **Autonomous Multi-Agent Orchestration**   Tasks are decomposed, executed, and audited by specialized AI agents coordinated through a LangGraph-based state machine.
+2. **Post-Quantum Security by Default**   All cryptographic operations use NIST PQC standards (Kyber KEM, Dilithium signatures) with classical fallbacks.
+3. **Self-Evolution**   The system can analyze its own execution failures, generate code patches, validate them at the AST level, and apply them atomically.
+4. **Defense in Depth**   A Cyber-Defense Sentinel provides real-time network monitoring, firewall simulation, and automated threat response.
+5. **Distributed by Design**   A P2P mesh network enables multiple AetherOS instances to discover each other, share workloads, and reach consensus.
+6. **Biometric Command Approval**   Critical operations require multi-factor biometric authentication through the YoKiMo engine.
+7. **Observable Intelligence**   A Neural Visualization system renders the chain of thought as a real-time interactive graph.
 
 ---
 
@@ -37,43 +37,43 @@ The convergence of large language models (LLMs), autonomous agents, and post-qua
 ### 2.1 High-Level Architecture
 
 ```
-┌──────────────────────────────────────────────────────────┐
-│                    AetherOS v2.0                          │
-│                                                           │
-│  ┌─────────┐  ┌──────────┐  ┌─────────┐  ┌───────────┐ │
-│  │Architect │  │ Executor │  │ Auditor │  │ Researcher│ │
-│  │  Agent   │  │  Agent   │  │  Agent  │  │   Agent   │ │
-│  └────┬─────┘  └────┬─────┘  └────┬────┘  └─────┬─────┘ │
-│       │              │             │              │       │
-│  ┌────▼──────────────▼─────────────▼──────────────▼────┐ │
-│  │              LangGraph Orchestrator                  │ │
-│  │         (State Machine + Event Bus)                  │ │
-│  └──────────────┬──────────────────┬───────────────────┘ │
-│                 │                  │                      │
-│  ┌──────────────▼───┐  ┌──────────▼──────────────────┐  │
-│  │   Tool Registry  │  │    Security Layer            │  │
-│  │  ┌────────────┐  │  │  ┌─────────┐ ┌───────────┐ │  │
-│  │  │ File Ops   │  │  │  │ Quantum │ │ Sentinel  │ │  │
-│  │  │ Shell Ops  │  │  │  │ Crypto  │ │ Firewall  │ │  │
-│  │  │ Web Ops    │  │  │  │ (Kyber/ │ │ (Network  │ │  │
-│  │  │ Vision Ops │  │  │  │Dilithium│ │ Monitor)  │ │  │
-│  │  │ Crypto Ops │  │  │  └─────────┘ └───────────┘ │  │
-│  │  │ Data Ops   │  │  │  ┌─────────┐ ┌───────────┐ │  │
-│  │  │ Monitor Ops│  │  │  │ Biometr │ │Kill Switch│ │  │
-│  │  └────────────┘  │  │  │ (YoKiMo)│ │(Hardware) │ │  │
-│  └──────────────────┘  │  └─────────┘ └───────────┘ │  │
-│                        └─────────────────────────────┘  │
-│                                                          │
-│  ┌────────────┐ ┌────────────┐ ┌──────────────────────┐ │
-│  │  Self-Evo  │ │  Mesh Net  │ │   Neural Map         │ │
-│  │  Engine    │ │  (P2P/Raft)│ │   Visualization      │ │
-│  └────────────┘ └────────────┘ └──────────────────────┘ │
-│                                                          │
-│  ┌──────────────────────────────────────────────────────┐│
-│  │                Memory Layer                           ││
-│  │  ChromaDB + Knowledge Graph + Context Manager         ││
-│  └──────────────────────────────────────────────────────┘│
-└──────────────────────────────────────────────────────────┘
+ 
+                     AetherOS v2.0                           
+                                                             
+               
+    Architect      Executor      Auditor      Researcher   
+      Agent         Agent         Agent         Agent      
+               
+                                                             
+      
+                  LangGraph Orchestrator                     
+             (State Machine + Event Bus)                     
+      
+                                                             
+          
+       Tool Registry          Security Layer                
+                       
+        File Ops              Quantum     Sentinel        
+        Shell Ops             Crypto      Firewall        
+        Web Ops               (Kyber/     (Network        
+        Vision Ops           Dilithium    Monitor)        
+        Crypto Ops                  
+        Data Ops                    
+        Monitor Ops           Biometr    Kill Switch      
+                 (YoKiMo)   (Hardware)       
+                 
+                             
+                                                            
+          
+      Self-Evo       Mesh Net        Neural Map            
+      Engine         (P2P/Raft)      Visualization         
+          
+                                                            
+    
+                    Memory Layer                            
+      ChromaDB + Knowledge Graph + Context Manager          
+    
+ 
 ```
 
 ### 2.2 Component Overview
@@ -103,18 +103,18 @@ The convergence of large language models (LLMs), autonomous agents, and post-qua
 
 AetherOS employs specialized agents in a hierarchical team structure:
 
-- **The Architect** — Strategic planning and task decomposition. Analyzes objectives, creates execution plans with tool selection, dependency ordering, and risk assessment.
-- **The Executor** — OS-level action execution. Interfaces with tools (file system, shell, web, vision) to carry out planned steps.
-- **The Auditor** — Security validation. Reviews every execution for policy violations, data leaks, and security risks. Maintains an integrity-chained audit log.
-- **The Researcher** — Information gathering. Searches, analyzes, and synthesizes information with a caching layer.
-- **The Guardian** — Threat response. Coordinates automated responses to detected security events including quarantine and network isolation.
+- **The Architect**   Strategic planning and task decomposition. Analyzes objectives, creates execution plans with tool selection, dependency ordering, and risk assessment.
+- **The Executor**   OS-level action execution. Interfaces with tools (file system, shell, web, vision) to carry out planned steps.
+- **The Auditor**   Security validation. Reviews every execution for policy violations, data leaks, and security risks. Maintains an integrity-chained audit log.
+- **The Researcher**   Information gathering. Searches, analyzes, and synthesizes information with a caching layer.
+- **The Guardian**   Threat response. Coordinates automated responses to detected security events including quarantine and network isolation.
 
 ### 3.2 LangGraph Orchestration
 
 The orchestration pipeline uses a compiled LangGraph state machine:
 
 ```
-architect → (should_execute?) → executor → auditor → (audit_decision?) → [continue|complete|error] → finalizer
+architect   (should_execute?)   executor   auditor   (audit_decision?)   [continue|complete|error]   finalizer
 ```
 
 The graph state carries:
@@ -181,12 +181,12 @@ The Self-Evolution Engine enables AetherOS to analyze its own execution failures
 ### 5.2 Evolution Cycle
 
 ```
-Scan → Diagnose → Generate → Validate → Apply → Verify
+Scan   Diagnose   Generate   Validate   Apply   Verify
 ```
 
 1. **Scan**: `LogScanner` parses log files for error patterns using regex matching against Python tracebacks and error types.
 2. **Diagnose**: Failures are classified by severity (LOW to CRITICAL) and deduplicated by error signature.
-3. **Generate**: `PatchGenerator` applies heuristic fix patterns (KeyError → `.get()`, FileNotFoundError → `os.makedirs`, etc.) or delegates to LLM for complex fixes.
+3. **Generate**: `PatchGenerator` applies heuristic fix patterns (KeyError   `.get()`, FileNotFoundError   `os.makedirs`, etc.) or delegates to LLM for complex fixes.
 4. **Validate**: `ASTValidator` checks:
    - Syntax validity via `ast.parse()`
    - Safety analysis comparing AST structures
@@ -213,7 +213,7 @@ Scan → Diagnose → Generate → Validate → Apply → Verify
 The Sentinel operates as a continuous monitoring daemon:
 
 ```
-NetworkScanner → ThreatDetector → FirewallManager → AuditLogger
+NetworkScanner   ThreatDetector   FirewallManager   AuditLogger
 ```
 
 ### 6.2 Network Monitoring
@@ -275,8 +275,8 @@ The `ForceDirectedLayout` engine uses a spring-electrical model:
 ### 7.3 Rendering
 
 Two rendering backends:
-1. **PyQt6 Widget** — Integrated into the control panel for desktop use
-2. **HTML Canvas** — Standalone HTML page with JavaScript animation for web/headless deployment
+1. **PyQt6 Widget**   Integrated into the control panel for desktop use
+2. **HTML Canvas**   Standalone HTML page with JavaScript animation for web/headless deployment
 
 Features include:
 - Real-time animated data flow
@@ -300,16 +300,16 @@ Peer discovery uses UDP broadcast:
 
 SWIM-inspired failure detection:
 - Heartbeat-based liveness with configurable intervals
-- Three-state progression: ALIVE → SUSPECT → DEAD
+- Three-state progression: ALIVE   SUSPECT   DEAD
 - Automatic hash ring rebalancing on membership changes
 
 ### 8.3 Task Distribution
 
 Multiple distribution strategies:
-- **Consistent Hashing** — Deterministic assignment with virtual nodes for even distribution
-- **Least Loaded** — Route to peer with lowest load factor
-- **Round Robin** — Cyclic distribution across alive peers
-- **Work Stealing** — Idle nodes steal from overloaded peers
+- **Consistent Hashing**   Deterministic assignment with virtual nodes for even distribution
+- **Least Loaded**   Route to peer with lowest load factor
+- **Round Robin**   Cyclic distribution across alive peers
+- **Work Stealing**   Idle nodes steal from overloaded peers
 
 ### 8.4 Consensus (Raft)
 
@@ -336,11 +336,11 @@ The `RaftConsensus` module provides distributed state agreement:
 
 ### 9.2 Biometric Factors
 
-1. **Voiceprint Verification** — SHA-256 hash comparison of voiceprint data
-2. **Typing Pattern Analysis** — Statistical comparison of keystroke timing distributions (mean, std dev, median, digraph intervals)
-3. **Command Pattern Analysis** — Behavioral baseline from command frequency distribution and time-of-day patterns
-4. **Hardware Token** — FIDO2/WebAuthn-compatible HMAC challenge-response
-5. **Behavioral Analysis** — Continuous scoring based on ongoing behavior match
+1. **Voiceprint Verification**   SHA-256 hash comparison of voiceprint data
+2. **Typing Pattern Analysis**   Statistical comparison of keystroke timing distributions (mean, std dev, median, digraph intervals)
+3. **Command Pattern Analysis**   Behavioral baseline from command frequency distribution and time-of-day patterns
+4. **Hardware Token**   FIDO2/WebAuthn-compatible HMAC challenge-response
+5. **Behavioral Analysis**   Continuous scoring based on ongoing behavior match
 
 ### 9.3 Continuous Authentication
 
@@ -422,13 +422,13 @@ Sliding-window conversation context:
 
 ### 12.1 Defense Layers
 
-1. **Cryptographic** — All data encrypted with post-quantum algorithms
-2. **Authentication** — Multi-factor biometric verification
-3. **Authorization** — Operation-level approval matrix
-4. **Network** — Sentinel firewall with real-time monitoring
-5. **Audit** — Integrity-chained log with tamper detection
-6. **Isolation** — Sandboxed tool execution
-7. **Kill Switch** — Hardware-ready emergency stop
+1. **Cryptographic**   All data encrypted with post-quantum algorithms
+2. **Authentication**   Multi-factor biometric verification
+3. **Authorization**   Operation-level approval matrix
+4. **Network**   Sentinel firewall with real-time monitoring
+5. **Audit**   Integrity-chained log with tamper detection
+6. **Isolation**   Sandboxed tool execution
+7. **Kill Switch**   Hardware-ready emergency stop
 
 ### 12.2 Audit Trail Integrity
 
@@ -463,12 +463,12 @@ Multi-trigger emergency stop:
 
 ## 14. Future Work
 
-1. **Native OQS Integration** — Replace Kyber/Dilithium simulations with `liboqs` bindings
-2. **GPU-Accelerated Quantum Simulation** — CUDA/ROCm backends for quantum circuits
-3. **Federated Learning** — Cross-mesh model improvement without data sharing
-4. **Formal Verification** — TLA+ specifications for consensus protocol
-5. **Real iptables Integration** — Netfilter kernel module interaction
-6. **WebAssembly Sandbox** — WASM-based tool isolation for untrusted code
+1. **Native OQS Integration**   Replace Kyber/Dilithium simulations with `liboqs` bindings
+2. **GPU-Accelerated Quantum Simulation**   CUDA/ROCm backends for quantum circuits
+3. **Federated Learning**   Cross-mesh model improvement without data sharing
+4. **Formal Verification**   TLA+ specifications for consensus protocol
+5. **Real iptables Integration**   Netfilter kernel module interaction
+6. **WebAssembly Sandbox**   WASM-based tool isolation for untrusted code
 
 ---
 
@@ -478,4 +478,4 @@ AetherOS v2.0 represents a comprehensive agentic operating system that combines 
 
 ---
 
-*© 2026 AetherOS Project. Autonomous AI Agent System.*
+*  2026 AetherOS Project. Autonomous AI Agent System.*

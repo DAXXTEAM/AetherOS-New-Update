@@ -1,4 +1,4 @@
-"""AetherOS API — WebSocket Handler.
+"""AetherOS API   WebSocket Handler.
 
 Manages WebSocket connections for real-time updates.
 """

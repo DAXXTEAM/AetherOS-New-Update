@@ -1,4 +1,4 @@
-"""AetherOS Nexus — Gesture Recognition Engine.
+"""AetherOS Nexus   Gesture Recognition Engine.
 
 Hand gesture detection and classification for touchless system control.
 Uses hand landmark detection and gesture classification pipeline.

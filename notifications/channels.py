@@ -1,4 +1,4 @@
-"""AetherOS Notifications — Delivery Channels."""
+"""AetherOS Notifications   Delivery Channels."""
 from __future__ import annotations
 
 import logging
@@ -51,5 +51,5 @@ class WebhookChannel(NotificationChannel):
         return "webhook"
 
     def send(self, title: str, message: str, data: Dict[str, Any] = None) -> bool:
-        logger.info(f"[WEBHOOK → {self.url}] {title}: {message} (simulated)")
+        logger.info(f"[WEBHOOK   {self.url}] {title}: {message} (simulated)")
         return True

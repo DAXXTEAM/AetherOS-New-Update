@@ -1,9 +1,9 @@
-"""AetherOS Localization Module — Multi-language support for GUI and CLI.
+"""AetherOS Localization Module   Multi-language support for GUI and CLI.
 
 Supported Languages:
-    - English (en) — Default
-    - Hindi (hi) — हिंदी
-    - Spanish (es) — Español
+    - English (en)   Default
+    - Hindi (hi)    
+    - Spanish (es)   Espa ol
 """
 from localization.i18n import (
     I18nManager,

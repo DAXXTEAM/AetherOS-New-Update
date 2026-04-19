@@ -122,7 +122,7 @@ class AuditLogger:
                 logger.error(f"Failed to write audit log: {e}")
 
         if severity in (AuditSeverity.CRITICAL, AuditSeverity.ALERT):
-            logger.warning(f"🔒 AUDIT [{severity.name}] {actor}: {action} → {target}")
+            logger.warning(f"  AUDIT [{severity.name}] {actor}: {action}   {target}")
 
         return entry
 

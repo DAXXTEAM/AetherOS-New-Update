@@ -1,4 +1,4 @@
-"""AetherOS Storage — Key-Value Store.
+"""AetherOS Storage   Key-Value Store.
 
 Thread-safe persistent key-value storage with TTL support.
 """

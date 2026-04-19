@@ -1,4 +1,4 @@
-"""Researcher Agent — Information gathering and analysis."""
+"""Researcher Agent   Information gathering and analysis."""
 from __future__ import annotations
 
 import json

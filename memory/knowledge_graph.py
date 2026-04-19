@@ -1,4 +1,4 @@
-"""Knowledge Graph — Semantic knowledge storage and reasoning."""
+"""Knowledge Graph   Semantic knowledge storage and reasoning."""
 from __future__ import annotations
 
 import json

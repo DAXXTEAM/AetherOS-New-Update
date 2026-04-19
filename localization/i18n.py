@@ -1,4 +1,4 @@
-"""AetherOS Localization — Internationalization Engine.
+"""AetherOS Localization   Internationalization Engine.
 
 Provides translation management, plural rule handling, message formatting,
 and dynamic locale switching for the entire AetherOS interface.
@@ -133,7 +133,7 @@ class LocaleRegistry:
         },
         LanguageCode.HINDI: {
             "name": "Hindi",
-            "native_name": "हिंदी",
+            "native_name": " ",
             "direction": "ltr",
             "date_format": "%d-%m-%Y %H:%M:%S",
             "number_decimal": ".",
@@ -141,7 +141,7 @@ class LocaleRegistry:
         },
         LanguageCode.SPANISH: {
             "name": "Spanish",
-            "native_name": "Español",
+            "native_name": "Espa ol",
             "direction": "ltr",
             "date_format": "%d/%m/%Y %H:%M:%S",
             "number_decimal": ",",
@@ -216,7 +216,7 @@ class I18nManager:
         with self._lock:
             old = self._current_locale
             self._current_locale = locale
-        logger.info(f"Locale changed: {old.value} → {locale.value}")
+        logger.info(f"Locale changed: {old.value}   {locale.value}")
         for observer in self._observers:
             try:
                 observer(locale)

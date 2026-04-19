@@ -1,4 +1,4 @@
-"""Cyber-Defense Sentinel — Advanced network monitoring and firewall simulation.
+"""Cyber-Defense Sentinel   Advanced network monitoring and firewall simulation.
 
 Upgrades the Auditor to actively monitor network connections, detect anomalies,
 and block unauthorized outbound traffic. Simulates iptables/firewall interaction
@@ -252,7 +252,7 @@ class ThreatEvent:
 
 
 # ---------------------------------------------------------------------------
-# Network Scanner — Reads active connections
+# Network Scanner   Reads active connections
 # ---------------------------------------------------------------------------
 
 class NetworkScanner:
@@ -404,7 +404,7 @@ class NetworkScanner:
 
 
 # ---------------------------------------------------------------------------
-# Threat Detector — Analyzes connections for anomalies
+# Threat Detector   Analyzes connections for anomalies
 # ---------------------------------------------------------------------------
 
 class ThreatDetector:
@@ -544,7 +544,7 @@ class ThreatDetector:
 
 
 # ---------------------------------------------------------------------------
-# Firewall Manager — Simulates iptables/nftables management
+# Firewall Manager   Simulates iptables/nftables management
 # ---------------------------------------------------------------------------
 
 class FirewallManager:
@@ -616,7 +616,7 @@ class FirewallManager:
             "timestamp": datetime.now().isoformat(),
             "iptables": rule.to_iptables_cmd(),
         })
-        logger.info(f"Firewall rule added: {rule.rule_id} — {rule.description}")
+        logger.info(f"Firewall rule added: {rule.rule_id}   {rule.description}")
         return rule.rule_id
 
     def remove_rule(self, rule_id: str) -> bool:
@@ -688,13 +688,13 @@ class FirewallManager:
 
 
 # ---------------------------------------------------------------------------
-# Sentinel — Main Cyber-Defense Controller
+# Sentinel   Main Cyber-Defense Controller
 # ---------------------------------------------------------------------------
 
 class CyberDefenseSentinel:
     """Main sentinel that orchestrates network defense.
 
-    Monitors → Detects → Decides → Acts → Logs
+    Monitors   Detects   Decides   Acts   Logs
     """
 
     def __init__(
@@ -732,14 +732,14 @@ class CyberDefenseSentinel:
         self._stats["started_at"] = datetime.now().isoformat()
         self._monitor_thread = threading.Thread(target=self._monitor_loop, daemon=True)
         self._monitor_thread.start()
-        logger.info("🛡️ Cyber-Defense Sentinel started")
+        logger.info("  Cyber-Defense Sentinel started")
 
     def stop(self) -> None:
         """Stop the sentinel."""
         self._running = False
         if self._monitor_thread:
             self._monitor_thread.join(timeout=10)
-        logger.info("🛡️ Cyber-Defense Sentinel stopped")
+        logger.info("  Cyber-Defense Sentinel stopped")
 
     def _monitor_loop(self) -> None:
         """Main monitoring loop."""
@@ -792,7 +792,7 @@ class CyberDefenseSentinel:
                 )
                 self.detector.add_blocked_ip(threat.dest_ip)
                 threat.action_taken = f"Auto-blocked IP {threat.dest_ip} for 60 minutes"
-                logger.warning(f"🛡️ Auto-blocked {threat.dest_ip}: {threat.description}")
+                logger.warning(f"  Auto-blocked {threat.dest_ip}: {threat.description}")
 
         if self._alert_callback:
             try:
@@ -856,7 +856,7 @@ class CyberDefenseSentinel:
 
 
 # ---------------------------------------------------------------------------
-# DNS Auditor — Monitors DNS resolution
+# DNS Auditor   Monitors DNS resolution
 # ---------------------------------------------------------------------------
 
 class DNSAuditor:

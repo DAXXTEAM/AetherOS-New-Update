@@ -1,4 +1,4 @@
-"""AetherOS Utils — Hashing Utilities."""
+"""AetherOS Utils   Hashing Utilities."""
 import hashlib
 import hmac
 import os

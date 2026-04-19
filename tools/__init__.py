@@ -1,4 +1,4 @@
-"""AetherOS Tools Module — All available agent tools."""
+"""AetherOS Tools Module   All available agent tools."""
 from tools.base import BaseTool, ToolResult, ToolRegistry
 from tools.file_ops import FileOps
 from tools.shell_ops import ShellOps

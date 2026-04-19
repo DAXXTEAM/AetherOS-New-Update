@@ -1,4 +1,4 @@
-"""AetherOS Agent Definitions — All agent types."""
+"""AetherOS Agent Definitions   All agent types."""
 from agents.architect import ArchitectAgent
 from agents.executor import ExecutorAgent
 from agents.auditor import AuditorAgent

@@ -1,4 +1,4 @@
-"""Quantum Computing Simulation Engine — Provides quantum circuit simulation
+"""Quantum Computing Simulation Engine   Provides quantum circuit simulation
 for AetherOS optimization and cryptographic operations.
 
 Implements:

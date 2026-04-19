@@ -1,4 +1,4 @@
-"""AetherOS Sandbox — Code Validation.
+"""AetherOS Sandbox   Code Validation.
 
 Validates code for security risks before sandbox execution.
 """

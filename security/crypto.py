@@ -61,9 +61,9 @@ class KyberSimulator:
 
     In production, replace with liboqs bindings.
     Security level mapping:
-      Kyber-512  → ECDH P-256 (AES-128 equivalent)
-      Kyber-768  → ECDH P-384 (AES-192 equivalent)
-      Kyber-1024 → ECDH P-384 + extended derivation (AES-256 equivalent)
+      Kyber-512    ECDH P-256 (AES-128 equivalent)
+      Kyber-768    ECDH P-384 (AES-192 equivalent)
+      Kyber-1024   ECDH P-384 + extended derivation (AES-256 equivalent)
     """
 
     CURVE_MAP = {

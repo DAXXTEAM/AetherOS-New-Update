@@ -1,4 +1,4 @@
-"""AetherOS Network Layer — P2P, Transport, and Service Discovery."""
+"""AetherOS Network Layer   P2P, Transport, and Service Discovery."""
 from net.transport import TransportLayer, TCPTransport, ConnectionPool
 from net.service_discovery import ServiceRegistry, ServiceEndpoint
 

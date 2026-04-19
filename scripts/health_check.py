@@ -40,12 +40,12 @@ def check_imports():
 
 
 def main():
-    print(f"\n{SYSTEM_NAME} v{SYSTEM_VERSION} — Health Check\n{'='*50}")
+    print(f"\n{SYSTEM_NAME} v{SYSTEM_VERSION}   Health Check\n{'='*50}")
     results = check_imports()
     ok = sum(1 for v in results.values() if v == "OK")
     fail = sum(1 for v in results.values() if v != "OK")
     for mod, status in sorted(results.items()):
-        icon = "✅" if status == "OK" else "❌"
+        icon = " " if status == "OK" else " "
         print(f"  {icon} {mod}: {status}")
     print(f"\n{'='*50}")
     print(f"Total: {len(results)} | OK: {ok} | FAIL: {fail}")

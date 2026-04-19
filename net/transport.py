@@ -1,4 +1,4 @@
-"""Transport Layer — Connection management, pooling, and message routing.
+"""Transport Layer   Connection management, pooling, and message routing.
 
 Provides reliable message delivery over TCP with:
 - Connection pooling and reuse

@@ -1,4 +1,4 @@
-"""AetherOS v3.0 — The Singularity — Setup Configuration."""
+"""AetherOS v3.0   The Singularity   Setup Configuration."""
 from setuptools import setup, find_packages
 
 setup(

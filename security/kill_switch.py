@@ -121,7 +121,7 @@ class KillSwitch:
             except OSError as e:
                 logger.error(f"Could not write kill switch file: {e}")
 
-            logger.critical(f"🚨 KILL SWITCH ENGAGED - Trigger: {trigger}, Reason: {reason}")
+            logger.critical(f"  KILL SWITCH ENGAGED - Trigger: {trigger}, Reason: {reason}")
 
             # Execute callbacks
             for cb in self._callbacks:

@@ -1,4 +1,4 @@
-"""AetherOS Utils — Timing Utilities."""
+"""AetherOS Utils   Timing Utilities."""
 import threading
 import time
 from collections import deque

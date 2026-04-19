@@ -1,4 +1,4 @@
-"""Self-Evolution Module — Enables AetherOS to analyze execution failures,
+"""Self-Evolution Module   Enables AetherOS to analyze execution failures,
 generate code patches, and apply them autonomously.
 
 The Architect agent drives a self-refactoring loop:
@@ -131,7 +131,7 @@ class CodePatch:
 
 @dataclass
 class EvolutionCycle:
-    """Tracks a complete evolution cycle: detect → diagnose → patch → verify."""
+    """Tracks a complete evolution cycle: detect   diagnose   patch   verify."""
     cycle_id: str = field(default_factory=lambda: f"evo-{uuid.uuid4().hex[:8]}")
     started_at: datetime = field(default_factory=datetime.now)
     completed_at: Optional[datetime] = None
@@ -158,7 +158,7 @@ class EvolutionCycle:
 
 
 # ---------------------------------------------------------------------------
-# Log Scanner — Parses execution logs for failure patterns
+# Log Scanner   Parses execution logs for failure patterns
 # ---------------------------------------------------------------------------
 
 class LogScanner:
@@ -289,7 +289,7 @@ class LogScanner:
 
 
 # ---------------------------------------------------------------------------
-# AST Validator — Validates patches at the AST level
+# AST Validator   Validates patches at the AST level
 # ---------------------------------------------------------------------------
 
 class ASTValidator:
@@ -346,7 +346,7 @@ class ASTValidator:
         new_funcs = sum(1 for n in ast.walk(new_tree) if isinstance(n, (ast.FunctionDef, ast.AsyncFunctionDef)))
         old_funcs = sum(1 for n in ast.walk(old_tree) if isinstance(n, (ast.FunctionDef, ast.AsyncFunctionDef)))
         if abs(new_funcs - old_funcs) > 5:
-            warnings.append(f"Large function count change: {old_funcs} → {new_funcs}")
+            warnings.append(f"Large function count change: {old_funcs}   {new_funcs}")
 
         is_safe = not any("Dangerous" in w for w in warnings)
         return is_safe, warnings
@@ -399,7 +399,7 @@ class ASTValidator:
 
 
 # ---------------------------------------------------------------------------
-# Patch Generator — Creates code patches from failure analysis
+# Patch Generator   Creates code patches from failure analysis
 # ---------------------------------------------------------------------------
 
 class PatchGenerator:
@@ -568,7 +568,7 @@ class PatchGenerator:
 
 
 # ---------------------------------------------------------------------------
-# Patch Applier — Safely applies and rolls back patches
+# Patch Applier   Safely applies and rolls back patches
 # ---------------------------------------------------------------------------
 
 class PatchApplier:
@@ -653,13 +653,13 @@ class PatchApplier:
 
 
 # ---------------------------------------------------------------------------
-# Evolution Engine — The main self-evolution controller
+# Evolution Engine   The main self-evolution controller
 # ---------------------------------------------------------------------------
 
 class EvolutionEngine:
     """Main self-evolution engine that orchestrates the refactoring loop.
 
-    Flow: Scan → Diagnose → Generate → Validate → Apply → Verify
+    Flow: Scan   Diagnose   Generate   Validate   Apply   Verify
     """
 
     def __init__(
@@ -699,7 +699,7 @@ class EvolutionEngine:
     async def run_cycle(self, model_generate: Optional[Callable] = None) -> EvolutionCycle:
         """Run a complete evolution cycle."""
         cycle = EvolutionCycle()
-        logger.info(f"🧬 Starting evolution cycle {cycle.cycle_id}")
+        logger.info(f"  Starting evolution cycle {cycle.cycle_id}")
 
         try:
             # Phase 1: Scan for failures
@@ -712,7 +712,7 @@ class EvolutionEngine:
                 self._cycles.append(cycle)
                 return cycle
 
-            logger.info(f"🔍 Found {len(failures)} unique failures")
+            logger.info(f"  Found {len(failures)} unique failures")
 
             # Phase 2: Generate patches
             patches = []
@@ -729,7 +729,7 @@ class EvolutionEngine:
                 self._cycles.append(cycle)
                 return cycle
 
-            logger.info(f"🔧 Generated {len(patches)} patches")
+            logger.info(f"  Generated {len(patches)} patches")
 
             # Phase 3: Validate patches
             validated_patches = []
@@ -783,7 +783,7 @@ class EvolutionEngine:
         cycle.completed_at = datetime.now()
         self._cycles.append(cycle)
         self._save_cycle_report(cycle)
-        logger.info(f"🧬 Evolution cycle {cycle.cycle_id} complete: {cycle.summary}")
+        logger.info(f"  Evolution cycle {cycle.cycle_id} complete: {cycle.summary}")
         return cycle
 
     def _save_cycle_report(self, cycle: EvolutionCycle) -> None:

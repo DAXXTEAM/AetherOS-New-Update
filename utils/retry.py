@@ -1,4 +1,4 @@
-"""AetherOS Utils — Retry Logic."""
+"""AetherOS Utils   Retry Logic."""
 import logging
 import random
 import time

@@ -1,4 +1,4 @@
-"""AetherOS Intelligence Module — OSINT & Threat Intelligence."""
+"""AetherOS Intelligence Module   OSINT & Threat Intelligence."""
 from intel.osint_scanner import (
     OSINTScanner,
     CredentialLeakMonitor,

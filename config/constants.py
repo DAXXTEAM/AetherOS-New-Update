@@ -1,4 +1,4 @@
-"""Global constants for AetherOS v3.0 — The Singularity."""
+"""Global constants for AetherOS v3.0   The Singularity."""
 import os
 
 # System Identity
@@ -84,9 +84,9 @@ BIOMETRIC_LOCKOUT_MINUTES = 15
 QUANTUM_DEFAULT_QUBITS = 8
 BB84_KEY_LENGTH = 256
 
-# ═══════════════════════════════════════════
-# v3.0 The Singularity — New Constants
-# ═══════════════════════════════════════════
+#  
+# v3.0 The Singularity   New Constants
+#  
 
 # Blockchain
 BLOCKCHAIN_DIFFICULTY = 2

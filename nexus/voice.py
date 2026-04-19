@@ -1,21 +1,21 @@
-"""AetherOS Nexus — Voice Command Processing Engine.
+"""AetherOS Nexus   Voice Command Processing Engine.
 
 Provides speech recognition, text-to-speech feedback, wake word detection,
 voice authentication, and a command registry for natural language control.
 
 Architecture:
-    ┌──────────────────────────────────────────────────────────┐
-    │                VoiceCommandProcessor                     │
-    │  ┌────────────┐  ┌───────────────┐  ┌───────────────┐  │
-    │  │ WakeWord   │→ │ SpeechToText  │→ │ CommandRouter │  │
-    │  │ Detector   │  │ Engine        │  │               │  │
-    │  └────────────┘  └───────────────┘  └───────┬───────┘  │
-    │                                             │           │
-    │  ┌────────────┐  ┌───────────────┐  ┌───────▼───────┐  │
-    │  │ Voice Auth │  │ TextToSpeech  │← │ Command       │  │
-    │  │            │  │ Engine        │  │ Registry      │  │
-    │  └────────────┘  └───────────────┘  └───────────────┘  │
-    └──────────────────────────────────────────────────────────┘
+     
+                     VoiceCommandProcessor                      
+                 
+         WakeWord       SpeechToText      CommandRouter     
+         Detector        Engine                               
+                 
+                                                               
+                 
+         Voice Auth      TextToSpeech      Command           
+                         Engine             Registry          
+                 
+     
 """
 from __future__ import annotations
 
@@ -44,9 +44,9 @@ from typing import (
 logger = logging.getLogger("nexus.voice")
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # Data Models
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 class VoiceCommandStatus(enum.Enum):
     """Status of a processed voice command."""
@@ -197,9 +197,9 @@ class VoiceResponse:
         )
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # Audio Processing Utilities
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 class AudioBuffer:
     """Thread-safe circular audio buffer for streaming processing."""
@@ -368,9 +368,9 @@ class AudioPreprocessor:
         return result
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # Wake Word Detection
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 class WakeWordDetector:
     """Detects wake words/phrases to activate the voice command system.
@@ -516,9 +516,9 @@ class WakeWordDetector:
         return self._is_listening
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # Speech-to-Text Engine
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 class SpeechToTextEngine:
     """Multi-backend speech recognition engine.
@@ -694,9 +694,9 @@ class SpeechToTextEngine:
         }
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # Text-to-Speech Engine
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 class TextToSpeechEngine:
     """Multi-backend text-to-speech engine for voice feedback.
@@ -777,7 +777,7 @@ class TextToSpeechEngine:
                     None, self._engine.runAndWait
                 )
             else:
-                # Simulation mode — just log
+                # Simulation mode   just log
                 logger.info(f"[TTS-SIM] Speaking: '{response.text}'")
                 await asyncio.sleep(len(response.text) * 0.05)  # Simulate speech time
 
@@ -849,9 +849,9 @@ class TextToSpeechEngine:
         }
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # Voice Authenticator
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 class VoiceAuthenticator:
     """Speaker identification and verification using voice biometrics.
@@ -964,9 +964,9 @@ class VoiceAuthenticator:
             return False
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # Voice Command Registry & Router
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 class VoiceCommandRegistry:
     """Registry for voice commands with intent matching and entity extraction.
@@ -1145,9 +1145,9 @@ class VoiceCommandRegistry:
             return dict(self._categories)
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # Voice Feedback Engine
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 class VoiceFeedbackEngine:
     """Manages contextual voice feedback with emotional modulation.
@@ -1230,15 +1230,15 @@ class VoiceFeedbackEngine:
         return await self.tts.speak(response)
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # Main Voice Command Processor
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 class VoiceCommandProcessor:
     """Central voice command processing pipeline.
 
-    Orchestrates wake word detection → speech recognition → command matching
-    → authentication → execution → voice feedback in a unified pipeline.
+    Orchestrates wake word detection   speech recognition   command matching
+      authentication   execution   voice feedback in a unified pipeline.
 
     Usage:
         processor = VoiceCommandProcessor()

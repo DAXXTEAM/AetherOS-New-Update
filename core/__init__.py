@@ -1,4 +1,4 @@
-"""AetherOS Core Module — Orchestration, Models, Events, Evolution, Mesh, Quantum."""
+"""AetherOS Core Module   Orchestration, Models, Events, Evolution, Mesh, Quantum."""
 from core.event_bus import EventBus, Event, EventType
 from core.model_manager import ModelManager
 from core.orchestrator import Orchestrator

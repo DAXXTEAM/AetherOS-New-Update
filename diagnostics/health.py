@@ -1,4 +1,4 @@
-"""AetherOS Diagnostics — Health Check System.
+"""AetherOS Diagnostics   Health Check System.
 
 Comprehensive system health monitoring with component-level status tracking.
 """

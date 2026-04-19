@@ -1,4 +1,4 @@
-"""AetherOS Security Module — Crypto, Audit, Kill Switch, Sentinel, Biometric, Blockchain, Honeypot."""
+"""AetherOS Security Module   Crypto, Audit, Kill Switch, Sentinel, Biometric, Blockchain, Honeypot."""
 from security.crypto import QuantumSafeCrypto, CryptoSuite, AESEncryptor
 from security.audit import AuditLogger, AuditCategory, AuditSeverity
 from security.kill_switch import KillSwitch, KillSwitchStatus

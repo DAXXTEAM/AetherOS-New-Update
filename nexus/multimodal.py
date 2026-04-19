@@ -1,4 +1,4 @@
-"""AetherOS Nexus — Multimodal Fusion Engine.
+"""AetherOS Nexus   Multimodal Fusion Engine.
 
 Fuses inputs from voice, vision, gesture, and ambient sound classifiers
 into a unified context for intelligent system control.
@@ -181,7 +181,7 @@ class MultimodalFusion:
         return fused
 
     def _fuse_max_confidence(self, inputs: Dict[str, List]) -> FusedInput:
-        """Max confidence fusion — picks the most confident single input."""
+        """Max confidence fusion   picks the most confident single input."""
         best_intent = ""
         best_conf = 0.0
         best_modality = ""
@@ -201,7 +201,7 @@ class MultimodalFusion:
         )
 
     def _fuse_cascading(self, inputs: Dict[str, List]) -> FusedInput:
-        """Cascading fusion — check modalities in priority order."""
+        """Cascading fusion   check modalities in priority order."""
         for modality in self.priority.priority_order:
             events = inputs.get(modality.value, [])
             for event in events:

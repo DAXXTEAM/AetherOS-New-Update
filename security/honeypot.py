@@ -1,4 +1,4 @@
-"""AetherOS Security — Honeypot Intrusion Detection System.
+"""AetherOS Security   Honeypot Intrusion Detection System.
 
 Creates and manages decoy files, directories, and services to detect,
 trap, and log unauthorized access attempts. Integrates with the
@@ -12,21 +12,21 @@ Honeypot Types:
     - Network Honeypots: Fake network shares and endpoints
 
 Architecture:
-    ┌──────────────────────────────────────────────────────────────┐
-    │                  HoneypotOrchestrator                        │
-    │  ┌──────────────┐  ┌────────────────┐  ┌────────────────┐  │
-    │  │ File         │  │ Directory      │  │ Credential     │  │
-    │  │ Honeypot     │  │ Honeypot       │  │ Honeypot       │  │
-    │  └──────┬───────┘  └───────┬────────┘  └───────┬────────┘  │
-    │         └──────────────────┼────────────────────┘           │
-    │                   ┌────────▼────────┐                       │
-    │                   │ Access Monitor  │                       │
-    │                   │ & Event Engine  │                       │
-    │                   └────────┬────────┘                       │
-    │                   ┌────────▼────────┐                       │
-    │                   │ Alert Manager   │→ Blockchain Ledger    │
-    │                   └─────────────────┘                       │
-    └──────────────────────────────────────────────────────────────┘
+     
+                       HoneypotOrchestrator                         
+                 
+         File              Directory           Credential         
+         Honeypot          Honeypot            Honeypot           
+                 
+                           
+                                                 
+                          Access Monitor                           
+                          & Event Engine                           
+                                                 
+                                                 
+                          Alert Manager     Blockchain Ledger     
+                                                 
+     
 """
 from __future__ import annotations
 
@@ -50,9 +50,9 @@ from typing import Any, Callable, Dict, List, Optional, Set, Tuple
 logger = logging.getLogger("security.honeypot")
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # Enums & Models
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 class HoneypotType(Enum):
     """Types of honeypot traps."""
@@ -147,9 +147,9 @@ class HoneypotAlert:
         }
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # Bait Content Generators
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 class BaitContentGenerator:
     """Generates realistic-looking decoy content for honeypot traps."""
@@ -267,9 +267,9 @@ SLACK_WEBHOOK=https://hooks.slack.com/services/T{random_alnum}/B{random_alnum}
         return random.choice(cls.BAIT_DIR_NAMES)
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # File Honeypot
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 class FileHoneypot:
     """Creates and monitors decoy files."""
@@ -329,7 +329,7 @@ class FileHoneypot:
         trap.last_checked = datetime.utcnow()
 
         if not os.path.exists(trap.path):
-            # File was deleted — definitely suspicious
+            # File was deleted   definitely suspicious
             alert = HoneypotAlert(
                 trap_id=trap_id,
                 trap_type=HoneypotType.FILE,
@@ -400,9 +400,9 @@ class FileHoneypot:
         return False
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # Directory Honeypot
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 class DirectoryHoneypot:
     """Creates and monitors decoy directories."""
@@ -506,9 +506,9 @@ class DirectoryHoneypot:
             return [t.to_dict() for t in self._traps.values()]
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # Credential Honeypot
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 class CredentialHoneypot:
     """Creates fake credential files that alert when used or accessed."""
@@ -516,7 +516,7 @@ class CredentialHoneypot:
     def __init__(self, base_dir: str):
         self.base_dir = base_dir
         self._traps: Dict[str, HoneypotTrap] = {}
-        self._canary_tokens: Dict[str, str] = {}  # token → trap_id
+        self._canary_tokens: Dict[str, str] = {}  # token   trap_id
         self._lock = threading.Lock()
 
     def create_canary_credentials(
@@ -537,7 +537,7 @@ class CredentialHoneypot:
                 "endpoint": f"https://{service_name}.internal.aetheros.io/api/v1",
             },
             "last_rotated": datetime.utcnow().isoformat(),
-            "notes": "Production credentials — rotate quarterly",
+            "notes": "Production credentials   rotate quarterly",
         }, indent=2)
 
         content_hash = hashlib.sha256(content.encode()).hexdigest()
@@ -595,9 +595,9 @@ class CredentialHoneypot:
         return alert
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # Alert Manager
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 class HoneypotAlertManager:
     """Manages honeypot alerts, notifications, and response actions."""
@@ -643,9 +643,9 @@ class HoneypotAlertManager:
             }
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # Honeypot Orchestrator (Main Interface)
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 class HoneypotOrchestrator:
     """Main honeypot management system.

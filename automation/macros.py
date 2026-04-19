@@ -1,4 +1,4 @@
-"""AetherOS Automation — Macro System.
+"""AetherOS Automation   Macro System.
 
 Record and replay sequences of commands as macros.
 """

@@ -1,4 +1,4 @@
-"""Biometric Integration — YoKiMo biometric command approval system.
+"""Biometric Integration   YoKiMo biometric command approval system.
 
 Implements multi-factor biometric authentication for high-security operations:
 - Voiceprint verification (simulated)
@@ -391,7 +391,7 @@ class HardwareTokenSimulator:
 
 
 # ---------------------------------------------------------------------------
-# YoKiMo — Personality-Aware Biometric Authentication
+# YoKiMo   Personality-Aware Biometric Authentication
 # ---------------------------------------------------------------------------
 
 class YoKiMoBiometricEngine:

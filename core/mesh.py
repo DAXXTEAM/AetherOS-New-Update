@@ -1,4 +1,4 @@
-"""Distributed Mesh Logic — Peer-to-peer discovery and task sharing
+"""Distributed Mesh Logic   Peer-to-peer discovery and task sharing
 for multiple AetherOS instances.
 
 Implements:
@@ -617,7 +617,7 @@ class MeshNetwork:
         self.membership.on("peer_joined", self._on_peer_joined)
 
         logger.info(
-            f"🌐 Mesh Network started: {self.local_peer.hostname} "
+            f"  Mesh Network started: {self.local_peer.hostname} "
             f"({self.local_peer.address}:{self.local_peer.port})"
         )
 
@@ -627,14 +627,14 @@ class MeshNetwork:
         self.discovery.stop()
         if self._maintenance_thread:
             self._maintenance_thread.join(timeout=5)
-        logger.info("🌐 Mesh Network stopped")
+        logger.info("  Mesh Network stopped")
 
     def _on_peer_discovered(self, peer: PeerInfo) -> None:
         """Handle newly discovered peer."""
         existing = self.membership.get_all_peers()
         known_ids = {p.peer_id for p in existing}
         if peer.peer_id not in known_ids:
-            logger.info(f"🌐 Discovered peer: {peer.hostname} ({peer.address})")
+            logger.info(f"  Discovered peer: {peer.hostname} ({peer.address})")
             self.membership.add_peer(peer)
             self.hash_ring.add_node(peer.peer_id)
         else:
@@ -643,13 +643,13 @@ class MeshNetwork:
             )
 
     def _on_peer_dead(self, peer: PeerInfo) -> None:
-        """Handle dead peer — redistribute tasks."""
-        logger.warning(f"🌐 Peer dead: {peer.hostname} ({peer.peer_id})")
+        """Handle dead peer   redistribute tasks."""
+        logger.warning(f"  Peer dead: {peer.hostname} ({peer.peer_id})")
         self.hash_ring.remove_node(peer.peer_id)
 
     def _on_peer_joined(self, peer: PeerInfo) -> None:
         """Handle new peer joining."""
-        logger.info(f"🌐 Peer joined: {peer.hostname} ({peer.peer_id})")
+        logger.info(f"  Peer joined: {peer.hostname} ({peer.peer_id})")
         self.hash_ring.add_node(peer.peer_id)
 
     def _maintenance_loop(self) -> None:

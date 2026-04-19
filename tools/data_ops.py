@@ -1,4 +1,4 @@
-"""Data Operations Tool — Data transformation, analysis, and formatting."""
+"""Data Operations Tool   Data transformation, analysis, and formatting."""
 from __future__ import annotations
 
 import csv

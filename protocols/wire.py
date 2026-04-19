@@ -1,4 +1,4 @@
-"""Wire Protocol — Binary message framing and encrypted channels
+"""Wire Protocol   Binary message framing and encrypted channels
 for inter-component and inter-node communication.
 
 Implements:

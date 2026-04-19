@@ -1,4 +1,4 @@
-"""AetherOS Telemetry — Alert Engine.
+"""AetherOS Telemetry   Alert Engine.
 
 Threshold-based alerting on collected metrics with
 configurable rules, conditions, and notification channels.
@@ -150,7 +150,7 @@ class AlertEngine:
                         rule_id=rule.rule_id,
                         rule_name=rule.name,
                         severity=rule.severity,
-                        message=f"Alert: {rule.name} — {metric_name}={value} {rule.condition.operator} {rule.condition.threshold}",
+                        message=f"Alert: {rule.name}   {metric_name}={value} {rule.condition.operator} {rule.condition.threshold}",
                         metric_value=value,
                         threshold=rule.condition.threshold,
                     )

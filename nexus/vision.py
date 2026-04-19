@@ -1,22 +1,22 @@
-"""AetherOS Nexus — Vision-Based Presence Detection & Lockdown.
+"""AetherOS Nexus   Vision-Based Presence Detection & Lockdown.
 
 Provides webcam-based presence detection, face recognition,
 gesture recognition integration, and automatic lockdown mode
 when unauthorized presence is detected or the operator leaves.
 
 Architecture:
-    ┌─────────────────────────────────────────────────────────────┐
-    │                  VisionPipeline                             │
-    │  ┌────────────┐  ┌───────────────┐  ┌──────────────────┐  │
-    │  │ Camera     │→ │ Frame         │→ │ Presence         │  │
-    │  │ Manager    │  │ Processor     │  │ Detector         │  │
-    │  └────────────┘  └───────────────┘  └────────┬─────────┘  │
-    │                                              │             │
-    │  ┌────────────┐  ┌───────────────┐  ┌────────▼─────────┐  │
-    │  │ Lockdown   │← │ Motion        │  │ Face             │  │
-    │  │ Manager    │  │ Detector      │  │ Recognizer       │  │
-    │  └────────────┘  └───────────────┘  └──────────────────┘  │
-    └─────────────────────────────────────────────────────────────┘
+     
+                       VisionPipeline                              
+                 
+         Camera         Frame             Presence             
+         Manager         Processor          Detector             
+                 
+                                                                  
+                 
+         Lockdown       Motion             Face                 
+         Manager         Detector           Recognizer           
+                 
+     
 """
 from __future__ import annotations
 
@@ -41,9 +41,9 @@ from typing import Any, Callable, Dict, List, Optional, Set, Tuple, Union
 logger = logging.getLogger("nexus.vision")
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # Enums & Data Models
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 class PresenceState(enum.Enum):
     """Current presence detection state."""
@@ -181,9 +181,9 @@ class FaceProfile:
         }
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # Frame Processing
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 class FrameProcessor:
     """Processes video frames for analysis.
@@ -276,9 +276,9 @@ class FrameProcessor:
         return self._frame_count
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # Motion Detection
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 class MotionDetector:
     """Detects and tracks motion in video frames.
@@ -411,9 +411,9 @@ class MotionDetector:
         }
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # Face Recognition
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 class FaceRecognizer:
     """Face detection and recognition engine.
@@ -619,9 +619,9 @@ class FaceRecognizer:
         }
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # Gesture Recognition
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 class GestureRecognizer:
     """Recognize hand gestures for touchless system control."""
@@ -663,9 +663,9 @@ class GestureRecognizer:
         return {"detections": self._detection_count, "registered_handlers": len(self._callbacks)}
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # Camera Manager
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 class CameraManager:
     """Manages webcam hardware and frame capture.
@@ -734,7 +734,7 @@ class CameraManager:
             except Exception:
                 pass
 
-        # Simulation mode — generate a synthetic frame
+        # Simulation mode   generate a synthetic frame
         self._frame_count += 1
         self._last_frame_time = time.time()
         frame = []
@@ -771,9 +771,9 @@ class CameraManager:
         return self._state in (CameraState.CONNECTED, CameraState.STREAMING)
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # Lockdown Manager
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 class LockdownManager:
     """Manages system lockdown based on presence detection events.
@@ -782,8 +782,8 @@ class LockdownManager:
     and automatic escalation when threats persist.
 
     Lockdown escalation:
-        NONE → SOFT (operator absent 30s) → MEDIUM (absent 2min)
-        → HARD (unauthorized detected) → CRITICAL (persistent threat)
+        NONE   SOFT (operator absent 30s)   MEDIUM (absent 2min)
+          HARD (unauthorized detected)   CRITICAL (persistent threat)
     """
 
     def __init__(
@@ -815,7 +815,7 @@ class LockdownManager:
 
             if event.state_after == PresenceState.PRESENT:
                 if event.recognized_users:
-                    # Known user present — can reduce lockdown
+                    # Known user present   can reduce lockdown
                     self._absence_start = None
                     self._threat_detected_at = None
                     if self._current_level.value <= LockdownLevel.MEDIUM.value:
@@ -885,7 +885,7 @@ class LockdownManager:
             action["actions"] = ["restore_normal_operations"]
 
         self._actions_log.append(action)
-        logger.info(f"Lockdown level changed: {old.name} → {level.name}")
+        logger.info(f"Lockdown level changed: {old.name}   {level.name}")
 
     def force_lockdown(self, level: LockdownLevel) -> None:
         """Force a specific lockdown level."""
@@ -921,9 +921,9 @@ class LockdownManager:
             }
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # Vision Presence Detector
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 class VisionPresenceDetector:
     """Main presence detection engine combining all vision subsystems.
@@ -1102,9 +1102,9 @@ class VisionPresenceDetector:
         return [e.to_dict() for e in list(self._event_history)[-limit:]]
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # Vision Pipeline (Unified)
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 class VisionPipeline:
     """High-level vision pipeline combining all detection subsystems.

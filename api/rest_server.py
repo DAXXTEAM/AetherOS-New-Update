@@ -1,4 +1,4 @@
-"""AetherOS API — REST Server Framework.
+"""AetherOS API   REST Server Framework.
 
 Provides a lightweight REST API server for external integrations
 and remote system management.

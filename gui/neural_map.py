@@ -1,4 +1,4 @@
-"""Neural Visualization — Advanced 2D/3D visualization of the
+"""Neural Visualization   Advanced 2D/3D visualization of the
 'Neural Chain of Thought' showing task graphs and agent interactions.
 
 Provides both a PyQt6 widget for the control panel and a standalone
@@ -424,7 +424,7 @@ class NeuralChainGraph:
                 self.add_edge(
                     prev.node_id, node_id,
                     edge_type=EdgeType.DATA_FLOW,
-                    label="→",
+                    label=" ",
                     animated=True,
                 )
 
@@ -532,7 +532,7 @@ body {{ background: #0d1117; color: #e6edf3; font-family: 'Inter', system-ui, sa
 <body>
 <canvas id="canvas"></canvas>
 <div id="info">
-  <h3>🧠 Neural Map</h3>
+  <h3>  Neural Map</h3>
   <div class="stat">Nodes: <span id="node-count">0</span></div>
   <div class="stat">Edges: <span id="edge-count">0</span></div>
   <div class="stat">Thoughts: <span id="thought-count">0</span></div>
@@ -667,7 +667,7 @@ requestAnimationFrame(draw);
 
 
 # ---------------------------------------------------------------------------
-# Neural Map Manager — Integration point for the system
+# Neural Map Manager   Integration point for the system
 # ---------------------------------------------------------------------------
 
 class NeuralMapManager:

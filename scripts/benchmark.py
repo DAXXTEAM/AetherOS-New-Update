@@ -82,9 +82,9 @@ def main():
     for bench in benchmarks:
         try:
             result = bench()
-            print(f"  ✅ {result['operation']}: {result['time_ms']}ms")
+            print(f"    {result['operation']}: {result['time_ms']}ms")
         except Exception as e:
-            print(f"  ❌ {bench.__name__}: {e}")
+            print(f"    {bench.__name__}: {e}")
     print("=" * 40)
 
 

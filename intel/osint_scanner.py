@@ -1,4 +1,4 @@
-"""AetherOS Intelligence — OSINT Scanner & Credential Leak Monitor.
+"""AetherOS Intelligence   OSINT Scanner & Credential Leak Monitor.
 
 Simulates deep-web/OSINT monitoring for credential leaks, threat intelligence
 gathering, and Indicator of Compromise (IOC) database management.
@@ -10,7 +10,7 @@ Components:
     - IOCDatabase: Manages Indicators of Compromise
     - IntelligenceAggregator: Combines all intel sources
 
-This is a simulation framework — no actual dark web access is performed.
+This is a simulation framework   no actual dark web access is performed.
 All data is synthetic for demonstration and testing purposes.
 """
 from __future__ import annotations
@@ -34,9 +34,9 @@ from typing import Any, Callable, Dict, List, Optional, Set, Tuple
 logger = logging.getLogger("intel.osint")
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # Enums & Models
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 class OSINTSource(Enum):
     """Sources of OSINT intelligence."""
@@ -189,9 +189,9 @@ class ThreatIntelReport:
         }
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # Dark Web Simulator
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 class DarkWebSimulator:
     """Simulates dark web monitoring for credential leaks.
@@ -263,9 +263,9 @@ class DarkWebSimulator:
             }
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # Credential Leak Monitor
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 class CredentialLeakMonitor:
     """Monitors for credential leaks across OSINT sources.
@@ -361,9 +361,9 @@ class CredentialLeakMonitor:
         }
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # Threat Intelligence Feed
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 class ThreatIntelFeed:
     """Aggregates threat intelligence from multiple sources."""
@@ -443,9 +443,9 @@ class ThreatIntelFeed:
         }
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # IOC Database
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 class IOCDatabase:
     """Local Indicator of Compromise database."""
@@ -523,9 +523,9 @@ class IOCDatabase:
             }
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # OSINT Scanner (Main Interface)
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 class OSINTScanner:
     """Main OSINT scanning engine combining all intelligence sources.
@@ -672,9 +672,9 @@ class OSINTScanner:
         }
 
 
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 # Intelligence Aggregator
-# ═══════════════════════════════════════════════════════════════════════════
+#  
 
 class IntelligenceAggregator:
     """High-level intelligence aggregation across all OSINT components."""

@@ -1,4 +1,4 @@
-"""Raft Consensus Protocol — Simplified Raft for distributed state agreement.
+"""Raft Consensus Protocol   Simplified Raft for distributed state agreement.
 
 Implements leader election, log replication, and state machine application
 for consistent distributed decisions across the AetherOS mesh.

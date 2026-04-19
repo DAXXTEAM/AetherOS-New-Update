@@ -1,4 +1,4 @@
-"""AetherOS Diagnostics — Performance Profiler.
+"""AetherOS Diagnostics   Performance Profiler.
 
 Code profiling and performance measurement utilities.
 """

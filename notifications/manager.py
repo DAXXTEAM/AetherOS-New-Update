@@ -1,4 +1,4 @@
-"""AetherOS Notifications — Notification Manager."""
+"""AetherOS Notifications   Notification Manager."""
 from __future__ import annotations
 
 import enum

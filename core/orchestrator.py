@@ -85,7 +85,7 @@ class Orchestrator:
 
     async def _architect_node(self, state: GraphState) -> dict:
         """The Architect: Plans and decomposes tasks."""
-        logger.info("🏗️  Architect: Planning task decomposition")
+        logger.info("   Architect: Planning task decomposition")
         self.state.update_status(STATUS_PLANNING)
         await self.events.publish(Event(
             event_type=EventType.AGENT_ACTIVATED,
@@ -125,7 +125,7 @@ class Orchestrator:
                     {"step": 3, "description": "Verify completion", "tool": "file_ops", "args": {}},
                 ]
 
-            logger.info(f"🏗️  Architect: Generated {len(plan)} step plan")
+            logger.info(f"   Architect: Generated {len(plan)} step plan")
             return {"plan": plan, "current_step": 0, "status": "planned"}
         except Exception as e:
             logger.error(f"Architect planning failed: {e}")
@@ -133,7 +133,7 @@ class Orchestrator:
 
     async def _executor_node(self, state: GraphState) -> dict:
         """The Executor: Executes planned steps."""
-        logger.info("⚡ Executor: Executing step")
+        logger.info("  Executor: Executing step")
         self.state.update_status(STATUS_EXECUTING)
         await self.events.publish(Event(
             event_type=EventType.AGENT_ACTIVATED,
@@ -179,7 +179,7 @@ class Orchestrator:
                 "status": "completed",
                 "timestamp": datetime.now().isoformat(),
             })
-            logger.info(f"⚡ Executor: Step {current + 1}/{len(plan)} completed")
+            logger.info(f"  Executor: Step {current + 1}/{len(plan)} completed")
             return {
                 "execution_results": results,
                 "current_step": current + 1,
@@ -202,7 +202,7 @@ class Orchestrator:
 
     async def _auditor_node(self, state: GraphState) -> dict:
         """The Auditor: Validates security and logs actions."""
-        logger.info("🛡️  Auditor: Reviewing execution")
+        logger.info("   Auditor: Reviewing execution")
         self.state.update_status(STATUS_AUDITING)
         await self.events.publish(Event(
             event_type=EventType.AGENT_ACTIVATED,
@@ -252,7 +252,7 @@ class Orchestrator:
             ))
 
             if audit.get("risk_level") == "CRITICAL":
-                logger.warning("🚨 Auditor: CRITICAL risk detected!")
+                logger.warning("  Auditor: CRITICAL risk detected!")
                 return {"audit_findings": findings, "status": "error", "error": "Critical security risk"}
 
             return {"audit_findings": findings}
@@ -262,7 +262,7 @@ class Orchestrator:
 
     async def _finalizer_node(self, state: GraphState) -> dict:
         """Finalize task execution and compile results."""
-        logger.info("✅ Finalizer: Compiling results")
+        logger.info("  Finalizer: Compiling results")
         results = state.get("execution_results", [])
         findings = state.get("audit_findings", [])
         error = state.get("error", "")
@@ -300,7 +300,7 @@ class Orchestrator:
 
     async def run_task(self, task: Task) -> TaskResult:
         """Execute a task through the full orchestration pipeline."""
-        logger.info(f"🚀 Starting task: {task.task_id} - {task.objective}")
+        logger.info(f"  Starting task: {task.task_id} - {task.objective}")
         self._active_tasks[task.task_id] = task
         task.mark_started()
 
@@ -347,7 +347,7 @@ class Orchestrator:
                     "duration": task.duration_seconds,
                 },
             )
-            logger.info(f"{'✅' if success else '❌'} Task {task.task_id} {'completed' if success else 'failed'}")
+            logger.info(f"{' ' if success else ' '} Task {task.task_id} {'completed' if success else 'failed'}")
             return result
         except Exception as e:
             logger.error(f"Task {task.task_id} orchestration failed: {e}")

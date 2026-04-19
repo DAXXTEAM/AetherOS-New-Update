@@ -1,4 +1,4 @@
-"""AetherOS Nexus — Ambient Sound Classification.
+"""AetherOS Nexus   Ambient Sound Classification.
 
 Classifies environmental sounds for contextual awareness:
 - Conversation detection (multiple speakers)

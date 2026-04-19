@@ -1,4 +1,4 @@
-"""AetherOS Telemetry — Dashboard Data Provider.
+"""AetherOS Telemetry   Dashboard Data Provider.
 
 Provides formatted data for the GUI dashboard widgets.
 """

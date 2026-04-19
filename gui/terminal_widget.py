@@ -41,7 +41,7 @@ if HAS_PYQT:
             toolbar = QHBoxLayout()
             toolbar.setSpacing(8)
 
-            self._title = QLabel("📟 Terminal Output")
+            self._title = QLabel("  Terminal Output")
             self._title.setStyleSheet(f"color: {AetherTheme.TEXT_ACCENT}; font-weight: 600; font-size: 14px;")
             toolbar.addWidget(self._title)
 
@@ -57,7 +57,7 @@ if HAS_PYQT:
             toolbar.addWidget(self._level_combo)
 
             # Auto-scroll toggle
-            self._scroll_btn = QPushButton("⬇ Auto-Scroll")
+            self._scroll_btn = QPushButton("  Auto-Scroll")
             self._scroll_btn.setCheckable(True)
             self._scroll_btn.setChecked(True)
             self._scroll_btn.clicked.connect(self._toggle_autoscroll)
@@ -65,7 +65,7 @@ if HAS_PYQT:
             toolbar.addWidget(self._scroll_btn)
 
             # Clear button
-            clear_btn = QPushButton("🗑 Clear")
+            clear_btn = QPushButton("  Clear")
             clear_btn.clicked.connect(self.clear)
             clear_btn.setFixedWidth(80)
             toolbar.addWidget(clear_btn)

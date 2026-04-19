@@ -180,7 +180,7 @@ class FileOps(BaseTool):
             else:
                 os.makedirs(os.path.dirname(resolved_d), exist_ok=True)
                 shutil.copy2(resolved_s, resolved_d)
-            return ToolResult(success=True, output=f"Copied {resolved_s} → {resolved_d}", artifacts=[resolved_d])
+            return ToolResult(success=True, output=f"Copied {resolved_s}   {resolved_d}", artifacts=[resolved_d])
         except Exception as e:
             return ToolResult(success=False, error=str(e))
 
@@ -196,7 +196,7 @@ class FileOps(BaseTool):
         try:
             os.makedirs(os.path.dirname(resolved_d), exist_ok=True)
             shutil.move(resolved_s, resolved_d)
-            return ToolResult(success=True, output=f"Moved {resolved_s} → {resolved_d}")
+            return ToolResult(success=True, output=f"Moved {resolved_s}   {resolved_d}")
         except Exception as e:
             return ToolResult(success=False, error=str(e))
 
@@ -229,7 +229,7 @@ class FileOps(BaseTool):
                     "permissions": oct(st.st_mode)[-3:],
                 })
             output = "\n".join(
-                f"{'📁' if e['type'] == 'dir' else '📄'} {e['name']:40s} "
+                f"{' ' if e['type'] == 'dir' else ' '} {e['name']:40s} "
                 f"{e['size']:>10,} bytes  {e['modified']}"
                 for e in entries
             )
@@ -334,19 +334,19 @@ class FileOps(BaseTool):
                 return
             for i, entry in enumerate(entries):
                 is_last = i == len(entries) - 1
-                connector = "└── " if is_last else "├── "
+                connector = "  " if is_last else "  "
                 full = os.path.join(dirpath, entry)
                 if os.path.isdir(full):
                     dir_count += 1
-                    lines.append(f"{prefix}{connector}📁 {entry}/")
-                    ext_prefix = prefix + ("    " if is_last else "│   ")
+                    lines.append(f"{prefix}{connector}  {entry}/")
+                    ext_prefix = prefix + ("    " if is_last else "    ")
                     walk(full, ext_prefix, depth + 1)
                 else:
                     file_count += 1
                     size = os.path.getsize(full)
-                    lines.append(f"{prefix}{connector}📄 {entry} ({size:,} bytes)")
+                    lines.append(f"{prefix}{connector}  {entry} ({size:,} bytes)")
 
-        lines.append(f"📁 {os.path.basename(resolved)}/")
+        lines.append(f"  {os.path.basename(resolved)}/")
         walk(resolved, "", 1)
         lines.append(f"\n{dir_count} directories, {file_count} files")
         return ToolResult(

@@ -1,4 +1,4 @@
-"""AetherOS Telemetry — Metrics Collection & Aggregation.
+"""AetherOS Telemetry   Metrics Collection & Aggregation.
 
 Collects system metrics including CPU, memory, disk, network usage,
 and application-level metrics like task throughput, agent performance,

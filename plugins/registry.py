@@ -1,4 +1,4 @@
-"""AetherOS Plugins — Plugin Registry & Dependency Management."""
+"""AetherOS Plugins   Plugin Registry & Dependency Management."""
 from __future__ import annotations
 
 from dataclasses import dataclass, field
