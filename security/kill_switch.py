@@ -72,13 +72,17 @@ class KillSwitch:
             self._setup_signal_handler()
 
     def _setup_signal_handler(self) -> None:
-        """Register SIGUSR1 as kill switch trigger."""
+        """Register signal handler as kill switch trigger."""
         try:
-            signal.signal(signal.SIGUSR1, self._signal_handler)
-            logger.info("Kill switch signal handler registered (SIGUSR1)")
-        except (OSError, ValueError):
-            logger.warning("Could not register signal handler")
-
+            # Handle cross-platform signals
+            # SIGUSR1 is Unix-only, so we check for its existence
+            if hasattr(signal, "SIGUSR1"):
+                signal.signal(signal.SIGUSR1, self._signal_handler)
+                logger.info("Kill switch signal handler registered (SIGUSR1)")
+            else:
+                logger.info("SIGUSR1 not available on this platform, skipping signal-based trigger")
+        except (OSError, ValueError) as e:
+            logger.warning(f"Could not register signal handler: {e}")
     def _signal_handler(self, signum, frame) -> None:
         self.engage("signal", f"Received signal {signum}")
 
