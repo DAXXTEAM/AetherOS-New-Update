@@ -327,7 +327,7 @@ class Orchestrator:
         }
 
         try:
-            final_state = await self._graph.ainvoke(initial_state)
+            final_state = await self._graph.ainvoke(initial_state, config={'recursion_limit': 100})
             success = final_state.get("status") == STATUS_COMPLETE
             output = final_state.get("final_output", "")
 
