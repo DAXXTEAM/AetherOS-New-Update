@@ -568,12 +568,36 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
+
+def get_user_choice():
+    print("
+[BOOT] --- AetherOS Intelligent Setup ---")
+    print("Choose your AI Brain Provider:")
+    print("1. Ollama (Local/Privacy - RECOMMENDED)")
+    print("2. OpenAI (GPT-4o - Needs API Key)")
+    print("3. Anthropic (Claude 3.5 - Needs API Key)")
+    print("4. Google (Gemini Pro - Needs API Key)")
+    
+    choice = input("
+Enter choice (1-4) [Default 1]: ").strip()
+    
+    if choice == '2': return 'openai'
+    if choice == '3': return 'anthropic'
+    if choice == '4': return 'google'
+    return 'ollama'
+
 def main():
+
     args = parse_args()
+    
+    # Interactive provider selection if running in standard CLI mode
+    selected_provider = args.provider
+    if not args.task and not args.headless and not args.status and not args.gui:
+        selected_provider = get_user_choice()
 
     config = AetherConfig(
         model=ModelConfig(
-            provider=ModelProvider(args.provider),
+            provider=ModelProvider(selected_provider),
             model_name=args.model,
         ),
         debug=args.debug,
