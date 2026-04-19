@@ -1,0 +1,35 @@
+# AetherOS Default Configuration
+system:
+  name: AetherOS
+  version: 1.0.0
+  codename: Prometheus
+  debug: false
+
+model:
+  provider: openai
+  model_name: gpt-4o
+  temperature: 0.1
+  max_tokens: 4096
+  timeout: 60
+
+security:
+  enable_quantum_safe: true
+  enable_kill_switch: true
+  shell_timeout: 300
+  sandbox_mode: true
+  command_whitelist_enabled: false
+  audit_log_enabled: true
+  max_concurrent_tasks: 5
+
+memory:
+  collection_name: aether_memory
+  embedding_model: all-MiniLM-L6-v2
+  max_results: 10
+  similarity_threshold: 0.7
+
+gui:
+  theme: dark
+  font_size: 13
+  terminal_font_size: 12
+  auto_scroll: true
+  max_log_lines: 5000
