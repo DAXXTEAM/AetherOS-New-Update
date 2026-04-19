@@ -25,7 +25,7 @@ class ModelProvider(str, Enum):
 
 class ModelConfig(BaseModel):
     """Configuration for LLM model selection."""
-    provider: ModelProvider = ModelProvider.OPENAI
+    provider: ModelProvider = ModelProvider.OLLAMA
     model_name: Optional[str] = None
     api_key: Optional[str] = None
     base_url: Optional[str] = None
@@ -57,7 +57,7 @@ class SecurityConfig(BaseModel):
     enable_quantum_safe: bool = True
     enable_kill_switch: bool = True
     shell_timeout: int = Field(default=MAX_SHELL_TIMEOUT, ge=1, le=600)
-    sandbox_mode: bool = True
+    sandbox_mode: bool = False
     allowed_directories: list[str] = Field(default_factory=lambda: [
         os.path.expanduser("~"),
         "/tmp",
